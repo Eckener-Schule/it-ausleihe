@@ -1,18 +1,18 @@
 <?php
-include "./header.php";
-include "./navbar.php";
+require_once "./header.php";
+require_once "./navbar.php";
 
 // Including of bootstrap-modals
-include "./modals/modal_admin_device.php";
-include "./modals/modal_history_device.php";
-include "./modals/modal_delete_device.php";
+require_once "./modals/modal_admin_device.php";
+require_once "./modals/modal_history_device.php";
+require_once "./modals/modal_delete_device.php";
 
-include "./modals/modal_admin_cart.php";
-include "./modals/modal_history_cart.php";
-include "./modals/modal_delete_cart.php";
+require_once "./modals/modal_admin_cart.php";
+require_once "./modals/modal_history_cart.php";
+require_once "./modals/modal_delete_cart.php";
 
-include "./modals/modal_add_cart.php";
-include "./modals/modal_add_device.php";
+require_once "./modals/modal_add_cart.php";
+require_once "./modals/modal_add_device.php";
 ?>
 
 <div class="container">
@@ -96,7 +96,7 @@ include "./modals/modal_add_device.php";
         </div>
     </div>
 </div>
-<?php include "./footer.php"; ?>
+<?php require_once "./footer.php"; ?>
 
 <script>
     // Datatable attributes

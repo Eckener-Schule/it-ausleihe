@@ -1,5 +1,5 @@
-<?php include "./header.php"; ?>
-<?php include "./navbar.php"; ?>
+<?php require_once "./header.php"; ?>
+<?php require_once "./navbar.php"; ?>
 
 <div class="container">
     <div class="row">
@@ -195,7 +195,7 @@
 
     </div>
 </div>
-<?php include "./footer.php"; ?>
+<?php require_once "./footer.php"; ?>
 <script>
     $(document).ready(function () {
         $('#avbl_devices').DataTable({
