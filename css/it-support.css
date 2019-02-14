@@ -69,8 +69,6 @@ body, .navbar-light .navbar-brand, .navbar-light .navbar-nav .active > .nav-link
     }
 }
 
-
-
 .navbar-nav li {
     width: 120px;
     text-align: center;
@@ -84,4 +82,15 @@ body, .navbar-light .navbar-brand, .navbar-light .navbar-nav .active > .nav-link
 .show > ul > li, .collapsing > ul > li {
     width: 100%;
     text-align: center;
+}
+
+.btn-create {
+    margin-bottom: -25px;
+    margin-left: 15px;
+    margin-top: 15px;
+    padding: 5px 20px;
+    color: #ffffff;
+    background-color: #2093cc;
+    border-radius: 20px;
+
 }

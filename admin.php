@@ -1,17 +1,26 @@
 <?php
 include "./header.php";
- include "./navbar.php";
+include "./navbar.php";
 
 // Including of bootstrap-modals
 include "./modals/modal_admin_device.php";
 include "./modals/modal_history_device.php";
 include "./modals/modal_delete_device.php";
+
+include "./modals/modal_admin_cart.php";
+include "./modals/modal_history_cart.php";
+include "./modals/modal_delete_cart.php";
+
+include "./modals/modal_add_cart.php";
+include "./modals/modal_add_device.php";
 ?>
 
 <div class="container">
     <div class="row">
-
-        <div class="headline">
+        <button type="button" class="btn btn-create" data-toggle="modal" data-target="#modal_add_cart">
+            + Wagen anlegen
+        </button>
+        <div class="headline col-12">
             <h4>Wagen verwalten:</h4>
         </div>
         <div class="dataTable col-12">
@@ -27,15 +36,16 @@ include "./modals/modal_delete_device.php";
                 <tbody>
                 <tr>
                     <td>1</td>
+                    <td>Notebooks</td>
                     <td>10</td>
                     <td class="function-icon">
-                        <button type="button" class="btn" data-toggle="modal" data-target="#">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_cart">
                             <img src="./img/writing.png" width="15px" height="15px">
                         </button>
-                        <button type="button" class="btn" data-toggle="modal" data-target="#">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_cart">
                             <img src="./img/eye.png" width="15px" height="15px">
                         </button>
-                        <button type="button" class="btn" data-toggle="modal" data-target="#">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_cart">
                             <img src="./img/trash.png" width="15px" height="15px">
                         </button>
                     </td>
@@ -44,8 +54,10 @@ include "./modals/modal_delete_device.php";
             </table>
         </div>
 
-
-        <div class="headline">
+        <button type="button" class="btn btn-create" data-toggle="modal" data-target="#modal_add_device">
+            + Gerät anlegen
+        </button>
+        <div class="headline col-12">
             <h4>Geräte verwalten:</h4>
         </div>
         <div class="dataTable col-12">
@@ -87,6 +99,7 @@ include "./modals/modal_delete_device.php";
 <?php include "./footer.php"; ?>
 
 <script>
+    // Datatable attributes
     $(document).ready(function () {
         $('#admin_devices').DataTable({
             language: {
@@ -110,11 +123,10 @@ include "./modals/modal_delete_device.php";
             },
             "lengthChange": false
         });
-
-
-
     });
 
+    //Show modal
     $('#myModal').on('shown.bs.modal', function () {
         $('#modal_admin_device').modal('show')    })
+
 </script>

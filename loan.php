@@ -1,5 +1,9 @@
-<?php include "./header.php"; ?>
-<?php include "./navbar.php"; ?>
+<?php
+require_once "./header.php";
+require_once "./navbar.php";
+?>
 
 
-<?php include "./footer.php"; ?>
+
+
+<?php require_once "./footer.php"; ?>
