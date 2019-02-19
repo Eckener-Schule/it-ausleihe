@@ -96,8 +96,8 @@ require_once "./modals/modal_add_device.php";
         </div>
     </div>
 </div>
-<?php require_once "./footer.php"; ?>
 
+<?php require_once "./footer.php"; ?>
 <script>
     // Datatable attributes
     $(document).ready(function () {
@@ -108,7 +108,11 @@ require_once "./modals/modal_add_device.php";
                     "next": ">>",
                 },
                 "search": "Suche:",
-                "sInfo": "Ergebnisse _START_ bis _END_ von (_TOTAL_)"
+                "sInfo": "Ergebnisse _START_ bis _END_ von (_TOTAL_)",
+                "infoFiltered":   "(gefiltert aus insgesamt _MAX_ Einträgen)",
+                "infoEmpty":        "Ergebnisse 0 bis 0 von (0)",
+                "sEmptyTable": "Keine Einträge zum Anzeigen",
+                "sZeroRecords": "Keine Einträge zum Anzeigen"
             },
             "lengthChange": false
         });
@@ -119,7 +123,11 @@ require_once "./modals/modal_add_device.php";
                     "next": ">>",
                 },
                 "search": "Suche:",
-                "sInfo": "Ergebnisse _START_ bis _END_ von (_TOTAL_)"
+                "sInfo": "Ergebnisse _START_ bis _END_ von (_TOTAL_)",
+                "infoFiltered":   "(gefiltert aus insgesamt _MAX_ Einträgen)",
+                "infoEmpty":        "Ergebnisse 0 bis 0 von (0)",
+                "sEmptyTable": "Keine Einträge zum Anzeigen",
+                "sZeroRecords": "Keine Einträge zum Anzeigen"
             },
             "lengthChange": false
         });

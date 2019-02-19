@@ -85,6 +85,7 @@ body, .navbar-light .navbar-brand, .navbar-light .navbar-nav .active > .nav-link
 }
 
 .btn-create {
+    font-weight: bold;
     margin-bottom: -25px;
     margin-left: 15px;
     margin-top: 15px;
@@ -92,5 +93,46 @@ body, .navbar-light .navbar-brand, .navbar-light .navbar-nav .active > .nav-link
     color: #ffffff;
     background-color: #2093cc;
     border-radius: 20px;
+    box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.75);
+}
 
+tr {
+    background-color: #2093cc;
+    color: #ffffff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19);
+    box-shadow: 0 6px 6px rgba(0,0,0,0.23);
+}
+
+tr > td {
+    color: #000000;
+}
+
+.form-content {
+    padding: 20px;
+    background-color: #f6f6f6;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19);
+    box-shadow: 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.form-label {
+    float: left;
+    width: 110px;
+}
+
+.submit-btn {
+    font-weight: bold;
+    padding: 5px 20px;
+    color: #ffffff;
+    background-color: #2093cc;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.75);
+}
+
+.submit-btn:hover, .btn-create:hover  {
+    box-shadow: inset 1px 1px 1px 0px rgba(0,0,0,0.75);
+    color: #ffffff;
+}
+
+table.dataTable.no-footer {
+    border-bottom: unset!important;
 }

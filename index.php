@@ -205,7 +205,11 @@
                     "next": ">>",
                 },
                 "search": "Suche:",
-                "sInfo": "Ergebnisse _START_ bis _END_ von (_TOTAL_)"
+                "sInfo": "Ergebnisse _START_ bis _END_ von (_TOTAL_)",
+                "infoFiltered":   "(gefiltert aus insgesamt _MAX_ Einträgen)",
+                "infoEmpty":        "Ergebnisse 0 bis 0 von (0)",
+                "sEmptyTable": "Keine Einträge zum Anzeigen",
+                "sZeroRecords": "Keine Einträge zum Anzeigen"
             },
             "lengthChange": false
         });
@@ -216,7 +220,11 @@
                     "next": ">>",
                 },
                 "search": "Suche:",
-                "sInfo": "Ergebnisse _START_ bis _END_ von (_TOTAL_)"
+                "sInfo": "Ergebnisse _START_ bis _END_ von (_TOTAL_)",
+                "infoFiltered":   "(gefiltert aus insgesamt _MAX_ Einträgen)",
+                "infoEmpty":        "Ergebnisse 0 bis 0 von (0)",
+                "sEmptyTable": "Keine Einträge zum Anzeigen",
+                "sZeroRecords": "Keine Einträge zum Anzeigen"
             },
             "lengthChange": false
         });

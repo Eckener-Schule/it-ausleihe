@@ -2,22 +2,32 @@
 require_once "./header.php";
 require_once "./navbar.php";
 ?>
-    <br><br>
     <div class="container">
-        <div class="col-12 row">
-                <div class="col-6">
+        <div class="headline col-12">
+            <h4>Gerät/Wagen ausleihen:</h4>
+        </div>
+        <div class="col-12 row form-content">
+                <div class="col-sm-12 col-lg-6">
                     <form>
-                    Geräte-ID: <input type="text" name="device-id"><br><br>
-                    Wagen-ID: <input type="text" name="cart-id">
+                        <br>
+                        <p class="form-label">Geräte-ID:</p><input type="text" name="device-id" id="device-id"><br><br>
+                        <p class="form-label">Wagen-ID:</p><input type="text" name="cart-id" id="cart-id">
+                </div>
+                <div class="col-sm-12 col-lg-6">
+                    <br>
+                    <p class="form-label">Vorname:</p><input type="text" name="borrower-surname"><br><br>
+                    <p class="form-label">Nachname:</p><input type="text" name="borrower-name"><br><br>
+                    <p class="form-label">Klasse:</p><input type="text" name="borrower-class"><br><br>
+                    <p class="form-label">Lehrer:</p><input list="teacher" name="browser"><br><br>
+                    <datalist id="teacher">
+                        <option value="Björn Baß">
+                    </datalist>
+                </div>
+            <div class="col-12 text-center">
+                <input type="submit" class="btn submit-btn">
+            </div>
 
-                </div>
-                <div class="col-6">
-                    Vorname: <input type="text" name="borrower-surname"><br><br>
-                    Nachname:<input type="text" name="borrower-name"><br><br>
-                    Klasse: <input type="text" name="borrower-class"><br><br>
-                    Lehrer: <input type="text" name="borrower-teacher"><br><br>
-                    </form>
-                </div>
+            </form>
         </div>
     </div>
 
