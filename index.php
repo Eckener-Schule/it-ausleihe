@@ -83,7 +83,6 @@
                     <td>Acer</td>
                     <td>Aspire 555</td>
                 </tr>
-                </tfoot>
             </table>
         </div>
 
@@ -188,8 +187,6 @@
                     <td>Aspire 555</td>
                     <td>12-01-2019</td>
                 </tr>
-
-                </tfoot>
             </table>
         </div>
 
