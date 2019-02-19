@@ -18,13 +18,14 @@ require_once "./navbar.php";
                 <p class="form-label">Vorname:</p><input type="text" name="borrower-surname" id="borrower-surname"><br><br>
                 <p class="form-label">Nachname:</p><input type="text" name="borrower-name" id="borrower-name"><br><br>
                 <p class="form-label">Klasse:</p><input type="text" name="borrower-class" id="borrower-class"><br><br>
-                <p class="form-label">Lehrer:</p><input list="teacher" name="teacher" id="teacher"><br><br>
-                <p class="form-label">Daten für:</p><input type="text" name="save-data-date" id="save-data-date" size="3" value="14"><span> Tage speichern</span><br><br>
-
+                <p class="form-label">Lehrer:</p><input list="teacher" name="teacher"><br><br>
                 <!-- Datalist values for autocomplete of the input field teacher -->
                 <datalist id="teacher">
                     <option value="Björn Baß">
                 </datalist>
+
+                <p class="form-label">Daten für:</p><input type="text" name="save-data-date" id="save-data-date" size="3" value="14"><span> Tage speichern</span><br><br>
+
 
             </div>
             <div class="col-12 text-center">
