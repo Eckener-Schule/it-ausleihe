@@ -7,8 +7,12 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                ...
+            <div class="modal-body text-center">
+                <p>Sind sie sicher das sie den unten genannten Wagen entfernen möchten ?</p>
+                <div class="modal-device">
+                    <span>Wagen-ID: </span>
+                    <span>Name: </span>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

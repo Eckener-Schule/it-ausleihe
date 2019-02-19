@@ -136,3 +136,8 @@ tr > td {
 table.dataTable.no-footer {
     border-bottom: unset!important;
 }
+
+.modal-device {
+    background-color: #f6f6f6;
+    width: 100%;
+}
