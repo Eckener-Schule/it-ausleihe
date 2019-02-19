@@ -3,6 +3,8 @@
  * Description of Borrower
  *
  * @author petersen
+ * @author lehmann
+ * @author jessen
  */
 class Borrower {
 
@@ -24,5 +26,22 @@ public function __construct(){
     $this->class = $_POST['class'];//Parameter of html form?
     $this->teacher = $_POST['teacher']; ////Parameter of html form?
     }
+    
+// Add a new borrower
+public function addBorrower($name, $surname, $class, $teacher) {
+    
+}
+
+// delete a borrower
+public function deleteBorrower($borrowerID) {
+    
+}
+
+// Modify a borrower
+public function modifyBorrower($name, $surname, $class, $teacher) {
+    
+}
+
+
 }
 ?>

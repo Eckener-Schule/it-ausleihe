@@ -3,11 +3,14 @@
  * Description of Cart
  *
  * @author petersen
+ * @author lehmann
+ * @author jessen
  */
 class Cart {
 
 public $cartId;
 public $devices; //Array of devices which are included in the cart
+public $name;   //name of the cart
 
 public function __construct() { 
 mysqli_select_db($connection, $dbname);
@@ -20,15 +23,20 @@ $this->cartId = $nextId; //borrowerID determined based on last db-entry
 $cart = mysqli_query("SELECT * FROM 'Cart' WHERE cartID = 1");
 }
 
-public function checkTotality() { //Check the cart about completeness 
+// Create a new cart
+public function addCart($devices, $name) {
+    
+}
+
+public function checkTotality($devices) { //Check the cart about completeness 
 
 }
 
-public function deleteCart(){ //Deletes cart from database
+public function deleteCart($cartID){ //Deletes cart from database
 
 }
 
-public function modifyCart(){ //Modifies the database entry of the cart
+public function modifyCart($device, $name){ //Modifies the database entry of the cart
 
 }
 

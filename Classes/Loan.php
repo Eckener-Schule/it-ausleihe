@@ -2,7 +2,9 @@
 /**
  * Description of Loan
  *
- * @author jessen, petersen
+ * @author petersen
+ * @author lehmann
+ * @author jessen
  */
 class Loan {
 
@@ -12,6 +14,7 @@ public $cart; //Object of class Cart
 public $borrower; //Object of class Borrower
 public $loanReturnTime; //Date and time when devices is returned
 public $loanTime; //Date and time when device is loaned
+public $comment;    // Comment of a loan
 
 
 public function __construct() {
@@ -36,18 +39,24 @@ $this->borrower = new Borrower();
 
 } //End of method __construct()
 
-public function returnLoan() {
+
+// Add a loan
+public function addLoan($deviceID, $borrowerID, $cartID, $comment) {
+
+}
+     
+public function returnLoan($deviceId, $cartId) {
 
 
 } //End of method returnLoan()
 
-public function modifyLoan(){
+public function deleteLoan($loanID){
 
 
-} //End of method modifyLoan()
+} //End of method deleteLoan()
 
 
-public function deleteBorrowerData() {
+public function deleteBorrowerData($days) {
 
 
 } //End of method deleteBorrowerData()

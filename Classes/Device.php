@@ -2,6 +2,8 @@
 /**
  * Description of Device
  *
+ * @author petersen
+ * @author lehmann
  * @author jessen
  */
 class Device {
@@ -11,6 +13,7 @@ class Device {
     public $brand;  // brand of the device
     public $qrCode; // QR-Code of the device
     public $cardId; //number of the cart
+    public $link;   //link to show details
     
     /***
      * Create a new object from device.
@@ -26,7 +29,7 @@ class Device {
     /***
      * Add new devices.
      */
-    public function addDevice($deviceID, $type, $name, $brand, $qrCode){
+    public function addDevice($type, $name, $brand, $qrCode, $link){
         
     }
     
@@ -40,7 +43,7 @@ class Device {
     /***
      * Change the type, name, brand or qrCode of the devices.
      */
-    public function modifyDevice($type, $name, $brand, $qrCode) {
+    public function modifyDevice($type, $name, $brand, $qrCode, $link) {
         
     }
 }
