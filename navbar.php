@@ -30,7 +30,7 @@
             <li class="nav-item <?php if ($path == "loan") {
                 echo "active";
             }; ?>">
-                <a class="nav-link" href="./loan">Ausleihe</a>
+                <a class="nav-link" href="./loan">Ausleihen</a>
             </li>
 
             <li class="nav-item <?php if ($path == "return") {
