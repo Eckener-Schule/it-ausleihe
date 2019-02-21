@@ -13,7 +13,8 @@
                         <br>
                         <p class="form-label">Geräte-ID:</p><input type="text" name="device-id" id="device-id"><br><br>
                         <p class="form-label">Type:</p><input type="text" name="device-type" id="device-type"><br><br>
-                        <p class="form-label">Hersteller:</p><input type="text" name="device-brand" id="device-brand"><br><br>
+                        <p class="form-label">Hersteller:</p><input type="text" name="device-brand"
+                                                                    id="device-brand"><br><br>
                     </div>
                     <div class="col-sm-12 col-lg-6">
                         <br>
@@ -21,11 +22,11 @@
                         <p class="form-label">Wagen-ID:</p><input type="text" name="device-cart-id" id="device-cart-id"><br><br>
                         <p class="form-label">Link:</p><input type="text" name="device-link" id="device-link"><br><br>
                     </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Schliessen</button>
-                <button type="submit" class="btn btn-primary">Gerät anlegen</button>
-            </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Schliessen</button>
+                    <button type="submit" class="btn btn-primary">Gerät anlegen</button>
+                </div>
         </form>
     </div>
 </div>

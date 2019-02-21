@@ -8,7 +8,46 @@
                 </button>
             </div>
             <div class="modal-body">
-
+                <table id="device-history" class="display" style="width:100%">
+                    <thead>
+                    <tr>
+                        <th>Gerät-ID:</th>
+                        <th>Ausleihdatum:</th>
+                        <th>Ausleiher:</th>
+                        <th>Klasse:</th>
+                        <th>Lehrer:</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>123456</td>
+                        <td>12-01-2019</td>
+                        <td>Peter Fröhlich</td>
+                        <td>IT-16-A</td>
+                        <td>Björn Baß</td>
+                    </tr>
+                    <tr>
+                        <td>123456</td>
+                        <td>12-01-2019</td>
+                        <td>Peter Fröhlich</td>
+                        <td>IT-16-A</td>
+                        <td>Björn Baß</td>
+                    </tr>
+                    <tr>
+                        <td>123456</td>
+                        <td>12-01-2019</td>
+                        <td>Peter Fröhlich</td>
+                        <td>IT-16-A</td>
+                        <td>Björn Baß</td>
+                    </tr>
+                    <tr>
+                        <td>123456</td>
+                        <td>12-01-2019</td>
+                        <td>Peter Fröhlich</td>
+                        <td>IT-16-A</td>
+                        <td>Björn Baß</td>
+                    </tr>
+                </table>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

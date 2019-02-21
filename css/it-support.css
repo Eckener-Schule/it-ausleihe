@@ -99,7 +99,6 @@ body, .navbar-light .navbar-brand, .navbar-light .navbar-nav .active > .nav-link
 tr {
     background-color: #2093cc;
     color: #ffffff;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19);
     box-shadow: 0 6px 6px rgba(0,0,0,0.23);
 }
 
@@ -110,7 +109,6 @@ tr > td {
 .form-content {
     padding: 20px;
     background-color: #f6f6f6;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19);
     box-shadow: 0 6px 6px rgba(0,0,0,0.23);
 }
 
@@ -137,7 +135,17 @@ table.dataTable.no-footer {
     border-bottom: unset!important;
 }
 
-.modal-device {
+
+.modal-body {
     background-color: #f6f6f6;
-    width: 100%;
+    box-shadow: 0 6px 6px rgba(0,0,0,0.23);
+}
+
+#cart-history > tbody > tr, #device-history > tbody > tr {
+    background-color: #ffffff;
+    border: 1px solid #f1f1f1;
+}
+
+#cart-history tr, #device-history tr {
+    box-shadow: unset;
 }
