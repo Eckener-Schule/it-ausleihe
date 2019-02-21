@@ -12,32 +12,81 @@ public $cartId;
 public $devices; //Array of devices which are included in the cart
 public $name;   //name of the cart
 
-public function __construct() { 
-mysqli_select_db($connection, $dbname);
-//determine next cartId
-$lastId = mysqli_query($connection, "SELECT COUNT(*) FROM Cart");
-$nextId = $lastId + 1;
-$this->cartId = $nextId; //borrowerID determined based on last db-entry	
+public function __construct() {
 
-//Build up array of devices
-$cart = mysqli_query("SELECT * FROM 'Cart' WHERE cartID = 1");
 }
 
-// Create a new cart
+    /**
+     * @param $devices
+     * @param $name
+     */
 public function addCart($devices, $name) {
-    
+    $db = new mysqli('localhost', 'root', '', 'it-ausleihe');
+    print_r($db->connect_error);
+
+    if($db->connect_errno) {
+        die('Es gibt ein Problem mit der Datenbank');
+    }
+
+
+    for($i=0; $i<$devices;$i++) {
+        $insert = "INSERT INTO 'cart' ('cartID', 'deviceID', 'name') VALUES (". $cartID .", ". $devices[$i] .", ". $name .")";
+        $db->query($insert);
+    }
+
+    }
+
+    /**
+     * Check the cart about completeness
+     * @param $cartID
+     */
+public function checkTotality($cartID) {
+    $db = new mysqli('localhost', 'root', '', 'it-ausleihe');
+    print_r($db->connect_error);
+
+    if($db->connect_errno) {
+        die('Es gibt ein Problem mit der Datenbank');
+    }
+    $select = "SELECT 'cartID', 'deviceID' FROM 'cart' WHERE 'cartID' = ". $cartID;
+    $db->query($select);
 }
 
-public function checkTotality($devices) { //Check the cart about completeness 
+    /**
+     * Deletes cart from database
+     * @param $cartID
+     */
+public function deleteCart($cartID){
+    $db = new mysqli('localhost', 'root', '', 'it-ausleihe');
+    print_r($db->connect_error);
+
+    if($db->connect_errno) {
+        die('Es gibt ein Problem mit der Datenbank');
+    }
+    $delete = "DELETE FROM 'cart' WHERE 'cartID' = ". $cartID;
+    $db->query($delete);
 
 }
 
-public function deleteCart($cartID){ //Deletes cart from database
+    /**
+     * Modifies the database entry of the cart
+     * @param $device
+     * @param $name
+     */
+public function modifyCart($mType, $device, $name){ //Modifies the database entry of the cart
+    $db = new mysqli('localhost', 'root', '', 'it-ausleihe');
+    print_r($db->connect_error);
 
-}
+    if($db->connect_errno) {
+        die('Es gibt ein Problem mit der Datenbank');
+    }
 
-public function modifyCart($device, $name){ //Modifies the database entry of the cart
-
+    if($mType == "add") {
+        $modify = "INSERT INTO 'cart' ('cartID', 'deviceID', 'name') VALUES ( ". $cartID .", ". $devices .", ". $name .")";
+    }
+    else {
+        $modify = "DELETE FROM 'cart' WHERE 'devieID' = ". $deviceID;
+    }
+    $db->query($modify);
 }
 
 }
