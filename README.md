@@ -27,7 +27,7 @@ Since there is no user authentication yet, it is necessary to set up BASICAuth v
 Once the requirements are met, continue with the following steps.
 
 First the project is presented under [https://github.com/Eckener-Schule/it-ausleihe/](https://github.com/Eckener-Schule/it-ausleihe/) in the desired target directory (Git must be installed).
-````Bash
+```Bash
 $ git clone https://github.com/Eckener-Schule/it-ausleihe.git
 ```
 The schema of the database is then imported. 
