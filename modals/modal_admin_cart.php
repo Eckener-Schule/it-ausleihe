@@ -11,8 +11,8 @@
                 <div class="col-12 row">
                     <div class="col-sm-12 col-lg-6">
                         <br>
-                        <p class="form-label">Wagen-ID:</p><input type="text" name="device-id" id="device-id"><br><br>
-                        <p class="form-label">Name:</p><input type="text" name="device-type" id="device-type"><br><br>
+                        <p class="form-label">Wagen-ID:</p><input type="text" name="cart-id" id="cart-id"><br><br>
+                        <p class="form-label">Name:</p><input type="text" name="cart-name" id="cart-name"><br><br>
                         <p class="form-label">Gerät1-ID:</p><input type="text" name="cart-device-1" id="cart-device-1"><br><br>
                         <p class="form-label">Gerät2-ID:</p><input type="text" name="cart-device-2" id="cart-device-2"><br><br>
                         <p class="form-label">Gerät3-ID:</p><input type="text" name="cart-device-3" id="cart-device-3"><br><br>
