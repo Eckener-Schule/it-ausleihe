@@ -24,28 +24,28 @@
                         <td>12-01-2019</td>
                         <td>Peter Fröhlich</td>
                         <td>IT-16-A</td>
-                        <td>Björn Baß</td>
+                        <td>Peter Lustig</td>
                     </tr>
                     <tr>
                         <td>123456</td>
                         <td>12-01-2019</td>
                         <td>Peter Fröhlich</td>
                         <td>IT-16-A</td>
-                        <td>Björn Baß</td>
+                        <td>Peter Lustig</td>
                     </tr>
                     <tr>
                         <td>123456</td>
                         <td>12-01-2019</td>
                         <td>Peter Fröhlich</td>
                         <td>IT-16-A</td>
-                        <td>Björn Baß</td>
+                        <td>Peter Lustig</td>
                     </tr>
                     <tr>
                         <td>123456</td>
                         <td>12-01-2019</td>
                         <td>Peter Fröhlich</td>
                         <td>IT-16-A</td>
-                        <td>Björn Baß</td>
+                        <td>Peter Lustig</td>
                     </tr>
                 </table>
             </div>

@@ -142,7 +142,6 @@ $cartID = "123456";
     });
     $('#modal_delete_cart').on('show.bs.modal', function(e) {
         var cartID = $(e.relatedTarget).data('cartid');
-        $(e.currentTarget).find('input[name="cart-id"]').val(cartID);
+       // $(e.currentTarget).find('input[name="cart-id"]').val(cartID);
     });
-
 </script>
