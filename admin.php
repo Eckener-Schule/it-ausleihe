@@ -13,6 +13,10 @@ require_once "./modals/modal_delete_cart.php";
 
 require_once "./modals/modal_add_cart.php";
 require_once "./modals/modal_add_device.php";
+
+// Testdata for data to modal
+$cartID = "123456";
+
 ?>
 
 <div class="container">
@@ -39,13 +43,13 @@ require_once "./modals/modal_add_device.php";
                     <td>Notebooks</td>
                     <td>10</td>
                     <td class="function-icon">
-                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_cart">
+                        <button type="button" class="btn" data-toggle="modal" data-cartid="<?php echo $cartID; ?>" data-target="#modal_admin_cart">
                             <img src="./img/writing.png" width="15" height="15" alt="Writing">
                         </button>
-                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_cart">
+                        <button type="button" class="btn" data-toggle="modal" data-cartid="<?php echo $cartID; ?>" data-target="#modal_history_cart">
                             <img src="./img/eye.png" width="15" height="15" alt="History">
                         </button>
-                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_cart">
+                        <button type="button" class="btn" data-toggle="modal" data-cartid="<?php echo $cartID; ?>" data-target="#modal_delete_cart">
                             <img src="./img/trash.png" width="15" height="15" alt="Delete">
                         </button>
                     </td>
@@ -131,8 +135,14 @@ require_once "./modals/modal_add_device.php";
         });
     });
 
-    //Show modal
-    $('#myModal').on('shown.bs.modal', function () {
-        $('#modal_admin_device').modal('show')    })
+    //triggered when modal is about to be shown
+    $('#modal_admin_cart').on('show.bs.modal', function(e) {
+        var cartID = $(e.relatedTarget).data('cartid');
+        $(e.currentTarget).find('input[name="cart-id"]').val(cartID);
+    });
+    $('#modal_delete_cart').on('show.bs.modal', function(e) {
+        var cartID = $(e.relatedTarget).data('cartid');
+        $(e.currentTarget).find('input[name="cart-id"]').val(cartID);
+    });
 
 </script>

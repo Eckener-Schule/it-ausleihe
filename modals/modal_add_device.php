@@ -22,10 +22,10 @@
                         <p class="form-label">Link:</p><input type="text" name="device-link"><br><br>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Schliessen</button>
-                    <button type="submit" class="btn btn-primary">Gerät anlegen</button>
-                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Schliessen</button>
+                <button type="submit" class="btn btn-primary">Gerät anlegen</button>
             </div>
         </form>
     </div>
