@@ -37,6 +37,7 @@ Finally the database must be maintained.
 
 ## Authors
 Maximilian Lembke
+Laura Wiegand
 Marcel Möller
 Cedric Fleiter
 Tobias Lang
