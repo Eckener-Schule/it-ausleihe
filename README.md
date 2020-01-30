@@ -35,4 +35,6 @@ In the directory "config" example.php is renamed to config.php.
 This file must contain the access data for the database. 
 Finally the database must be maintained.  
 
+## Authors
+Maximilian Lembke
 Marcel Möller
