@@ -37,3 +37,4 @@ Finally the database must be maintained.
 
 ## Authors
 Maximilian Lembke
+Rouven Klomfaß
