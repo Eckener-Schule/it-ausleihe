@@ -38,3 +38,4 @@ Finally the database must be maintained.
 ## Authors
 Maximilian Lembke
 Tobias Lang
+Jacob Prütz
