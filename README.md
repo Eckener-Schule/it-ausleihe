@@ -37,3 +37,11 @@ Finally the database must be maintained.
 
 ## Authors
 Maximilian Lembke
+Rouven Klomfaß
+Jan-Philip Link
+Laura Wiegand
+Leon Vagnoni
+Marcel Möller
+Cedric Fleiter
+Tobias Lang
+Jacob Prütz
