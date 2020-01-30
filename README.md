@@ -37,4 +37,5 @@ Finally the database must be maintained.
 
 ## Authors
 Maximilian Lembke
+
 Marcel Möller
