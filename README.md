@@ -36,4 +36,8 @@ This file must contain the access data for the database.
 Finally the database must be maintained.  
 
 ## Authors
-Maximilian Lembke 
+Maximilian Lembke
+Marcel Möller
+Cedric Fleiter
+Tobias Lang
+Jacob Prütz
