@@ -37,6 +37,7 @@ Finally the database must be maintained.
 
 ## Authors
 Maximilian Lembke
+Rouven Klomfaß
 Jan-Philip Link
 Laura Wiegand
 Leon Vagnoni
