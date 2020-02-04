@@ -44,13 +44,13 @@ $cartID = "123456";
                     <td>10</td>
                     <td class="function-icon">
                         <button type="button" class="btn" data-toggle="modal" data-cartid="<?php echo $cartID; ?>" data-target="#modal_admin_cart">
-                            <img src="./img/writing.png" width="15" height="15" alt="Writing">
+                            <img src="public/assets/img/writing.png" width="15" height="15" alt="Writing">
                         </button>
                         <button type="button" class="btn" data-toggle="modal" data-cartid="<?php echo $cartID; ?>" data-target="#modal_history_cart">
-                            <img src="./img/eye.png" width="15" height="15" alt="History">
+                            <img src="public/assets/img/eye.png" width="15" height="15" alt="History">
                         </button>
                         <button type="button" class="btn" data-toggle="modal" data-cartid="<?php echo $cartID; ?>" data-target="#modal_delete_cart">
-                            <img src="./img/trash.png" width="15" height="15" alt="Delete">
+                            <img src="public/assets/img/trash.png" width="15" height="15" alt="Delete">
                         </button>
                     </td>
                 </tr>
@@ -84,13 +84,13 @@ $cartID = "123456";
                     <td>7</td>
                     <td class="function-icon">
                         <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
-                            <img src="./img/writing.png" width="15" height="15" alt="Writing">
+                            <img src="public/assets/img/writing.png" width="15" height="15" alt="Writing">
                         </button>
                         <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
-                            <img src="./img/eye.png" width="15" height="15" alt="History">
+                            <img src="public/assets/img/eye.png" width="15" height="15" alt="History">
                         </button>
                         <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
-                            <img src="./img/trash.png" width="15" height="15" alt="Delete">
+                            <img src="public/assets/img/trash.png" width="15" height="15" alt="Delete">
                         </button>
                     </td>
                 </tr>
