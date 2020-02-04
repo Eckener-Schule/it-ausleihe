@@ -1,9 +1,9 @@
 <?php
 abstract class ActiveRecord
 {
-    abstract protected function save();
-    abstract protected function delete();
+    abstract public function save();
+    abstract public function delete();
     abstract protected function insert();
     abstract protected function update();
-    abstract protected function load();
+    abstract static function load($id):ActiveRecord;
 }
