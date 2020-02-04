@@ -3,16 +3,16 @@ require_once "./header.php";
 require_once "./navbar.php";
 
 // Including of bootstrap-modals
-require_once "./modals/modal_admin_device.php";
-require_once "./modals/modal_history_device.php";
-require_once "./modals/modal_delete_device.php";
+require_once "./view/template/modal/modal_admin_device.php";
+require_once "./view/template/modal/modal_history_device.php";
+require_once "./view/template/modal/modal_delete_device.php";
 
-require_once "./modals/modal_admin_cart.php";
-require_once "./modals/modal_history_cart.php";
-require_once "./modals/modal_delete_cart.php";
+require_once "./view/template/modal/modal_admin_cart.php";
+require_once "./view/template/modal/modal_history_cart.php";
+require_once "./view/template/modal/modal_delete_cart.php";
 
-require_once "./modals/modal_add_cart.php";
-require_once "./modals/modal_add_device.php";
+require_once "./view/template/modal/modal_add_cart.php";
+require_once "./view/template/modal/modal_add_device.php";
 
 // Testdata for data to modal
 $cartID = "123456";
