@@ -1,8 +1,8 @@
 <?php
 require_once "./_autoload.php";
 
-require_once "./header.php";
-require_once "./navbar.php";
+require_once "./view/template/header.php";
+require_once "./view/template/navbar.php";
 
 // Including of bootstrap-modals
 require_once "./view/template/modal/modal_admin_device.php";
@@ -101,7 +101,7 @@ $cartID = "123456";
     </div>
 </div>
 
-<?php require_once "./footer.php"; ?>
+<?php require_once "./view/template/footer.php"; ?>
 <script>
     // Datatable attributes
     $(document).ready(function () {
