@@ -12,7 +12,8 @@
     <link href="./css/it-support.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/datatables.min.css"/>
 
-
+    <!--fontawsome-->
+    <link rel="stylesheet" type="text/css" href="./libs/fontawesome-free-5.12.0-web/css/all.min.css">
 
 </head>
 <body lang="de">

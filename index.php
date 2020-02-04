@@ -1,7 +1,7 @@
 <?php require_once "./header.php"; ?>
 <?php require_once "./navbar.php"; ?>
 
-<div class="container">
+<main role="main" class="container">
     <div class="row">
         <div class="headline">
             <h4>Geräte verfügbar:</h4>
@@ -191,7 +191,8 @@
         </div>
 
     </div>
-</div>
+</main>
+
 <?php require_once "./footer.php"; ?>
 <script>
     $(document).ready(function () {
