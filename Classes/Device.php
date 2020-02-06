@@ -60,7 +60,7 @@ class Device extends ActiveRecord
      * @param string $brand
      * @param string $qrCode
      */
-    public function __construct($deviceID, $type, $name, $cardId, $brand = "", $qrCode= "")
+    public function __construct($deviceID, $type, $name, $cardId, $brand = "", $qrCode = "")
     {
         $this->setDeviceID($deviceID);
         $this->setType($type);
@@ -199,7 +199,17 @@ class Device extends ActiveRecord
 
     protected function update()
     {
-        // TODO: Implement update() method.
+        $database = new Database();
+        $params = [
+            ":type" => $this->getType(),
+            ":name" => $this->getName(),
+            ":brand" => $this->getBrand(),
+            ":qrCode" => $this->getQrCode(),
+            ":cartID" => $this->getCardId(),
+            ":deviceID" => $this->getDeviceID()
+        ];
+        $query = 'UPDATE device SET type = :type, name = :name, brand = :brand, qrCode = :qrCode, cartID = :cartID WHERE 1 = 1 AND deviceID = :deviceID;';
+        $result = $database->executeQuery($query,$params);
     }
 
     static function load($id): ActiveRecord
