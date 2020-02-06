@@ -1,7 +1,7 @@
 <?php
 /**
- * Active Record is a desing pattern 
- * that allows you to change data in a databse by using an Object.
+ * Active Record is a design pattern 
+ * that allows you to change data in a database by using an Object.
 **/
 abstract class ActiveRecord
 {
@@ -10,7 +10,7 @@ abstract class ActiveRecord
      **/
     abstract public function save();
     /**
-     * it delets the record
+     * it deletes the record
      **/
     abstract public function delete();
     /**
