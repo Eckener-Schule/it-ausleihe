@@ -21,7 +21,7 @@ class Database
     {
         try 
         {
-            $this->pdo = new PDO('mysql:host='.$host.';dbname='.$database, $user, $password);
+            $this->pdo = new PDO('mysql:host='.$this->host.';dbname='.$this->database, $this->user, $this->password);
         } catch (PDOException $e) 
         {
             die('Database connection error: '.$e->getMessage());
