@@ -3,7 +3,7 @@
 <?php require_once "./view/template/header.php"; ?>
 <?php require_once "./view/template/navbar.php"; ?>
 
-<div class="container">
+<main role="main" class="container">
     <div class="row">
         <div class="headline">
             <h4>Geräte verfügbar:</h4>
