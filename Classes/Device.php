@@ -194,7 +194,18 @@ class Device extends ActiveRecord
 
     protected function insert()
     {
-        // TODO: Implement insert() method.
+        $database = new Database();
+        $params = [
+            ":type" => $this->getType(),
+            ":name" => $this->getName(),
+            ":brand" => $this->getBrand(),
+            ":qrCode" => $this->getQrCode(),
+            ":cartID" => $this->getCardId(),
+            ":deviceID" => $this->getDeviceID()
+        ];
+        $query = 'INSERT INTO device (`deviceID`, `name`, `type`, `brand`, `qrCode`, `cartID`) VALUES (:deviceID, :name, :type, :brand, :qrCode, :cartID);';
+        $database->executeQuery($query,$params);
+
     }
 
     protected function update()
