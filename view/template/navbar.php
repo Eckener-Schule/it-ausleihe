@@ -18,7 +18,7 @@
             <li class="nav-item <?php if ($path != "admin" AND $path != "loan" AND $path != "return") {
                 echo "active";
             }; ?>">
-                <a class="nav-link" href="../..">Übersicht </a>
+                <a class="nav-link" href="/">Übersicht </a>
             </li>
 
             <li class="nav-item <?php if ($path == "admin") {
