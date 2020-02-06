@@ -36,5 +36,14 @@ This file must contain the access data for the database.
 Finally the database must be maintained.  
 
 ## Authors
-Maximilian Lembke
-Jacob Prütz
+Maximilian Lembke  
+Rouven Klomfaß  
+Jan-Philip Link  
+Laura Wiegand  
+Leon Vagnoni  
+Marcel Möller  
+Cedric Fleiter  
+Tobias Lang  
+Jacob Prütz  
+Tim Ermecke  
+Daniel Volquardsen  
