@@ -189,7 +189,12 @@ class Device extends ActiveRecord
 
     public function delete()
     {
-        // TODO: Implement delete() method.
+        $database = new Database();
+        $params = [
+            ":deviceID" => $this->getDeviceID()
+        ];
+        $query = 'DELETE FROM device WHERE 1 = 1 AND deviceID = :deviceID;';
+        $database->executeQuery($query,$params);
     }
 
     protected function insert()
