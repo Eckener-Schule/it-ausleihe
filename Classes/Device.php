@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Description of Device
  *
@@ -6,15 +7,50 @@
  * @author lehmann
  * @author jessen
  */
-class Device {
-    public $deviceID; // numer of the device
-    public $type;   // type of the device
-    public $name; // name of the device
-    public $brand;  // brand of the device
-    public $qrCode; // QR-Code of the device
-    public $cardId; //number of the cart
-    public $link;   //link to show details
-    
+class Device
+{
+    /**
+     * Unique id of the device
+     * @var int $deviceID
+     */
+    public $deviceID;
+
+    /**
+     * Type of the device
+     * @var string $type
+     */
+    public $type;
+
+    /**
+     * Name of the device
+     * @var string $name
+     */
+    public $name;
+
+    /**
+     * Brand of the device
+     * @var string $brand
+     */
+    public $brand;
+
+    /**
+     * Qr code of the device
+     * @var string $qrCode
+     */
+    public $qrCode;
+
+    /**
+     * Id of the cart
+     * @var int $cardId
+     */
+    public $cardId;
+
+    /**
+     * Link to show detail
+     * @var string $link
+     */
+    public $link;
+
     /***
      * Create a new object from device.
      */
@@ -25,25 +61,28 @@ class Device {
         $this->brand = $_POST['C4'];
         $this->qrCode = $_POST['C5']; 
     }
-    
+
     /***
      * Add new devices.
      */
-    public function addDevice($type, $name, $brand, $qrCode, $link){
-        
+    public function addDevice($type, $name, $brand, $qrCode, $link)
+    {
+
     }
-    
+
     /***
      * Delete existed devices.
      */
-    public function deleteDevice($deviceId){
-        
+    public function deleteDevice($deviceId)
+    {
+
     }
-    
+
     /***
      * Change the type, name, brand or qrCode of the devices.
      */
-    public function modifyDevice($type, $name, $brand, $qrCode, $link) {
-        
+    public function modifyDevice($type, $name, $brand, $qrCode, $link)
+    {
+
     }
 }
