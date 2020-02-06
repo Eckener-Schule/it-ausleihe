@@ -53,13 +53,21 @@ class Device
 
     /***
      * Create a new object from device.
+     * @param int $deviceID
+     * @param string $type
+     * @param string $name
+     * @param int $cardId
+     * @param string $brand
+     * @param string $qrCode
      */
-    public function __construct() {
-        $this->deviceID = $_POST['C1'];
-        $this->type = $_POST['C2'];
-        $this->name = $_POST['C3'];
-        $this->brand = $_POST['C4'];
-        $this->qrCode = $_POST['C5']; 
+    public function __construct($deviceID, $type, $name, $cardId, $brand = "", $qrCode= "")
+    {
+        $this->setDeviceID($deviceID);
+        $this->setType($type);
+        $this->setName($name);
+        $this->setBrand($brand);
+        $this->setQrCode($qrCode);
+        $this->setCardId($cardId);
     }
 
     /**
