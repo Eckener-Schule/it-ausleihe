@@ -6,7 +6,7 @@ Since the IT department of the Eckener-Schule in Flensburg provides equipment fo
 Since there is more and more equipment and it is not well documented who is lending devices, a new project was born.
 
 ## How to borrow a device
-1 A teacher or student goes to the IT department and asks if he/she can borrow a device.
+1. A teacher or student goes to the IT department and asks if he/she can borrow a device.
 
 2. A member of the IT department opens the main page of the project and can immediately see which devices are available.
 
