@@ -8,11 +8,12 @@
     <title>IT-Ausleihe</title>
 
     <!-- Bootstrap -->
-    <link href="/public/assets/css/bootstrap.css" rel="stylesheet">
-    <link href="/public/assets/css/it-support.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/public/assets/css/datatables.css"/>
+    <link href="./public/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="./public/assets/css/it-support.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./public/assets/css/datatables.css"/>
 
-
+    <!--fontawsome-->
+    <link rel="stylesheet" type="text/css" href="./public/assets/libs/fontawesome-free-5.12.0-web/css/all.min.css">
 
 </head>
 <body lang="de">

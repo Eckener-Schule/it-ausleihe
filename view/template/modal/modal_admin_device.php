@@ -10,17 +10,32 @@
             <div class="modal-body">
                 <div class="col-12 row">
                     <div class="col-sm-12 col-lg-6">
-                        <br>
-                        <p class="form-label">Geräte-ID:</p><input type="text" name="device-id" id="device-id"><br><br>
-                        <p class="form-label">Type:</p><input type="text" name="device-type" id="device-type"><br><br>
-                        <p class="form-label">Hersteller:</p><input type="text" name="device-brand"
-                                                                    id="device-brand"><br><br>
+                        <div class="form-group">
+                            <label for="form-label">Geräte-ID:</label>
+                            <input type="text" class="form-control" name="device-id" id="device-id">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-label">Type:</label>
+                            <input type="text" class="form-control" name="device-type" id="device-type">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-label">Hersteller:</label>
+                            <input type="text" class="form-control" name="device-brand" id="device-brand">
+                        </div>
                     </div>
                     <div class="col-sm-12 col-lg-6">
-                        <br>
-                        <p class="form-label">Name:</p><input type="text" name="device-name" id="device-name"><br><br>
-                        <p class="form-label">Wagen-ID:</p><input type="text" name="device-cart-id" id="device-cart-id"><br><br>
-                        <p class="form-label">Link:</p><input type="text" name="device-link" id="device-link"><br><br>
+                        <div class="form-group">
+                            <label for="form-label">Name:</label>
+                            <input type="text" class="form-control" name="device-name" id="device-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-label">Wagen-ID:</label>
+                            <input type="text" class="form-control" name="device-cart-id" id="device-cart-id">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-label">Link:</label>
+                            <input type="text" class="form-control" name="device-link" id="device-link">
+                        </div>
                     </div>
                 </div>
             </div>

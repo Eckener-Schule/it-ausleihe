@@ -10,22 +10,56 @@
             <div class="modal-body">
                 <div class="col-12 row">
                     <div class="col-sm-12 col-lg-6">
-                        <br>
-                        <p class="form-label">Wagen-ID:</p><input type="text" name="device-id"><br><br>
-                        <p class="form-label">Name:</p><input type="text" name="device-type"><br><br>
-                        <p class="form-label">Gerät1-ID:</p><input type="text" name="cart-device-1"><br><br>
-                        <p class="form-label">Gerät2-ID:</p><input type="text" name="cart-device-2"><br><br>
-                        <p class="form-label">Gerät3-ID:</p><input type="text" name="cart-device-3"><br><br>
-                        <p class="form-label">Gerät4-ID:</p><input type="text" name="cart-device-4"><br><br>
+                        <div class="form-group">
+                            <label for="cart-id">Wagen-ID:</label>
+                            <input type="text" class="form-control" name="cart-id" id="cart-id">
+                        </div>
+                        <div class="form-group">
+                            <label for="cart-name">Name:</label>
+                            <input type="text" class="form-control" name="cart-name" id="cart-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="cart-device-1">Gerät1-ID:</label>
+                            <input type="text" class="form-control" name="cart-device-1" id="cart-device-1">
+                        </div>
+                        <div class="form-group">
+                            <label for="cart-device-2">Gerät2-ID:</label>
+                            <input type="text" class="form-control" name="cart-device-2" id="cart-device-2">
+                        </div>
+                        <div class="form-group">
+                            <label for="cart-device-3">Gerät3-ID:</label>
+                            <input type="text" class="form-control" name="cart-device-3" id="cart-device-3">
+                        </div>
+                        <div class="form-group">
+                            <label for="cart-device-4">Gerät4-ID:</label>
+                            <input type="text" class="form-control" name="cart-device-4" id="cart-device-4">
+                        </div>
                     </div>
                     <div class="col-sm-12 col-lg-6">
-                        <br>
-                        <p class="form-label">Gerät5-ID:</p><input type="text" name="cart-device-5"><br><br>
-                        <p class="form-label">Gerät6-ID:</p><input type="text" name="cart-device-6"><br><br>
-                        <p class="form-label">Gerät7-ID:</p><input type="text" name="cart-device-7"><br><br>
-                        <p class="form-label">Gerät8-ID:</p><input type="text" name="cart-device-8"><br><br>
-                        <p class="form-label">Gerät9-ID:</p><input type="text" name="cart-device-9"><br><br>
-                        <p class="form-label">Gerät10-ID:</p><input type="text" name="cart-device-10"><br><br>
+                        <div class="form-group">
+                            <label for="cart-device-5">Gerät5-ID:</label>
+                            <input type="text" class="form-control" name="cart-device-5" id="cart-device-5">
+                        </div>
+                        <div class="form-group">
+                            <label for="cart-device-6">Gerät6-ID:</label>
+                            <input type="text" class="form-control" name="cart-device-6" id="cart-device-6">
+                        </div>
+                        <div class="form-group">
+                            <label for="cart-device-7">Gerät7-ID:</label>
+                            <input type="text" class="form-control" name="cart-device-7" id="cart-device-7">
+                        </div>
+                        <div class="form-group">
+                            <label for="cart-device-8">Gerät8-ID:</label>
+                            <input type="text" class="form-control" name="cart-device-8" id="cart-device-8">
+                        </div>
+                        <div class="form-group">
+                            <label for="cart-device-9">Gerät9-ID:</label>
+                            <input type="text" class="form-control" name="cart-device-9" id="cart-device-9">
+                        </div>
+                        <div class="form-group">
+                            <label for="cart-device-10">Gerät10-ID:</label>
+                            <input type="text" class="form-control" name="cart-device-10" id="cart-device-10">
+                        </div>
                     </div>
                 </div>
             </div>
