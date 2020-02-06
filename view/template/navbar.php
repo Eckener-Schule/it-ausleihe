@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-expand-lg navbar-light eckener-moodle">
     <p class="navbar-brand-logo"></p><a class="navbar-brand" href="/"><h1>IT-Ausleihe</h1></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
@@ -18,7 +19,7 @@
             <li class="nav-item <?php if ($path != "admin" AND $path != "loan" AND $path != "return") {
                 echo "active";
             }; ?>">
-                <a class="nav-link" href="/">Übersicht </a>
+                <a class="nav-link" href="./">Übersicht </a>
             </li>
 
             <li class="nav-item <?php if ($path == "admin") {

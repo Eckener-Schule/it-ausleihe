@@ -20,16 +20,10 @@ require_once "./view/template/modal/modal_add_device.php";
 $cartID = "123456";
 
 ?>
-
-<div class="container">
+<main role="main" class="container">
     <div class="row">
-        <button type="button" class="btn btn-create" data-toggle="modal" data-target="#modal_add_cart">
-            + Wagen anlegen
-        </button>
-        <div class="headline col-12">
+        <div class="col">
             <h4>Wagen verwalten:</h4>
-        </div>
-        <div class="dataTable col-12">
             <table id="admin_carts" class="display" style="width:100%">
                 <thead>
                 <tr>
@@ -46,26 +40,25 @@ $cartID = "123456";
                     <td>10</td>
                     <td class="function-icon">
                         <button type="button" class="btn" data-toggle="modal" data-cartid="<?php echo $cartID; ?>" data-target="#modal_admin_cart">
-                            <img src="public/assets/img/writing.png" width="15" height="15" alt="Writing">
+                        <i class="fas fa-edit"></i>
                         </button>
                         <button type="button" class="btn" data-toggle="modal" data-cartid="<?php echo $cartID; ?>" data-target="#modal_history_cart">
-                            <img src="public/assets/img/eye.png" width="15" height="15" alt="History">
+                            <i class="fas fa-eye"></i>
                         </button>
                         <button type="button" class="btn" data-toggle="modal" data-cartid="<?php echo $cartID; ?>" data-target="#modal_delete_cart">
-                            <img src="public/assets/img/trash.png" width="15" height="15" alt="Delete">
+                            <i class="fas fa-trash-alt"></i>
                         </button>
                     </td>
                 </tr>
             </table>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_add_cart">
+            <i class="fas fa-plus-square"></i> Wagen anlegen
+            </button>
         </div>
-
-        <button type="button" class="btn btn-create" data-toggle="modal" data-target="#modal_add_device">
-            + Gerät anlegen
-        </button>
-        <div class="headline col-12">
+    </div>
+    <div class="row">
+        <div class="col">
             <h4>Geräte verwalten:</h4>
-        </div>
-        <div class="dataTable col-12">
             <table id="admin_devices" class="display" style="width:100%">
                 <thead>
                 <tr>
@@ -86,21 +79,24 @@ $cartID = "123456";
                     <td>7</td>
                     <td class="function-icon">
                         <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
-                            <img src="public/assets/img/writing.png" width="15" height="15" alt="Writing">
+                            <i class="fas fa-edit"></i>
                         </button>
                         <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
-                            <img src="public/assets/img/eye.png" width="15" height="15" alt="History">
+                            <i class="fas fa-eye"></i>
                         </button>
                         <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
-                            <img src="public/assets/img/trash.png" width="15" height="15" alt="Delete">
+                            <i class="fas fa-trash-alt"></i>
+
                         </button>
                     </td>
                 </tr>
             </table>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_add_device">
+            <i class="fas fa-plus-square"></i> Gerät anlegen
+        </button>
         </div>
     </div>
 </div>
-
 <?php require_once "./view/template/footer.php"; ?>
 <script>
     // Datatable attributes
