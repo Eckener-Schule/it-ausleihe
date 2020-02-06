@@ -7,7 +7,7 @@
  * @author lehmann
  * @author jessen
  */
-class Device
+class Device extends ActiveRecord
 {
     /**
      * Unique id of the device
@@ -182,27 +182,28 @@ class Device
         $this->link = $link;
     }
 
-    /***
-     * Add new devices.
-     */
-    public function addDevice($type, $name, $brand, $qrCode, $link)
+    public function save()
     {
-
+        // TODO: Implement save() method.
     }
 
-    /***
-     * Delete existed devices.
-     */
-    public function deleteDevice($deviceId)
+    public function delete()
     {
-
+        // TODO: Implement delete() method.
     }
 
-    /***
-     * Change the type, name, brand or qrCode of the devices.
-     */
-    public function modifyDevice($type, $name, $brand, $qrCode, $link)
+    protected function insert()
     {
+        // TODO: Implement insert() method.
+    }
 
+    protected function update()
+    {
+        // TODO: Implement update() method.
+    }
+
+    static function load($id): ActiveRecord
+    {
+        // TODO: Implement load() method.
     }
 }
