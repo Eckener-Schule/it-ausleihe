@@ -1,18 +1,20 @@
 <?php
-require_once "./header.php";
-require_once "./navbar.php";
+require_once "./_autoload.php";
+
+require_once "./view/template/header.php";
+require_once "./view/template/navbar.php";
 
 // Including of bootstrap-modals
-require_once "./modals/modal_admin_device.php";
-require_once "./modals/modal_history_device.php";
-require_once "./modals/modal_delete_device.php";
+require_once "./view/template/modal/modal_admin_device.php";
+require_once "./view/template/modal/modal_history_device.php";
+require_once "./view/template/modal/modal_delete_device.php";
 
-require_once "./modals/modal_admin_cart.php";
-require_once "./modals/modal_history_cart.php";
-require_once "./modals/modal_delete_cart.php";
+require_once "./view/template/modal/modal_admin_cart.php";
+require_once "./view/template/modal/modal_history_cart.php";
+require_once "./view/template/modal/modal_delete_cart.php";
 
-require_once "./modals/modal_add_cart.php";
-require_once "./modals/modal_add_device.php";
+require_once "./view/template/modal/modal_add_cart.php";
+require_once "./view/template/modal/modal_add_device.php";
 
 // Testdata for data to modal
 $cartID = "123456";
@@ -44,13 +46,13 @@ $cartID = "123456";
                     <td>10</td>
                     <td class="function-icon">
                         <button type="button" class="btn" data-toggle="modal" data-cartid="<?php echo $cartID; ?>" data-target="#modal_admin_cart">
-                            <img src="./img/writing.png" width="15" height="15" alt="Writing">
+                            <img src="public/assets/img/writing.png" width="15" height="15" alt="Writing">
                         </button>
                         <button type="button" class="btn" data-toggle="modal" data-cartid="<?php echo $cartID; ?>" data-target="#modal_history_cart">
-                            <img src="./img/eye.png" width="15" height="15" alt="History">
+                            <img src="public/assets/img/eye.png" width="15" height="15" alt="History">
                         </button>
                         <button type="button" class="btn" data-toggle="modal" data-cartid="<?php echo $cartID; ?>" data-target="#modal_delete_cart">
-                            <img src="./img/trash.png" width="15" height="15" alt="Delete">
+                            <img src="public/assets/img/trash.png" width="15" height="15" alt="Delete">
                         </button>
                     </td>
                 </tr>
@@ -84,13 +86,13 @@ $cartID = "123456";
                     <td>7</td>
                     <td class="function-icon">
                         <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
-                            <img src="./img/writing.png" width="15" height="15" alt="Writing">
+                            <img src="public/assets/img/writing.png" width="15" height="15" alt="Writing">
                         </button>
                         <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
-                            <img src="./img/eye.png" width="15" height="15" alt="History">
+                            <img src="public/assets/img/eye.png" width="15" height="15" alt="History">
                         </button>
                         <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
-                            <img src="./img/trash.png" width="15" height="15" alt="Delete">
+                            <img src="public/assets/img/trash.png" width="15" height="15" alt="Delete">
                         </button>
                     </td>
                 </tr>
@@ -99,7 +101,7 @@ $cartID = "123456";
     </div>
 </div>
 
-<?php require_once "./footer.php"; ?>
+<?php require_once "./view/template/footer.php"; ?>
 <script>
     // Datatable attributes
     $(document).ready(function () {
