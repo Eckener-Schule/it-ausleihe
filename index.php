@@ -1,5 +1,7 @@
-<?php require_once "./header.php"; ?>
-<?php require_once "./navbar.php"; ?>
+<?php require_once "./_autoload.php"; ?>
+
+<?php require_once "./view/template/header.php"; ?>
+<?php require_once "./view/template/navbar.php"; ?>
 
 <main role="main" class="container">
     <div class="row">
@@ -191,9 +193,8 @@
         </div>
 
     </div>
-</main>
-
-<?php require_once "./footer.php"; ?>
+</div>
+<?php require_once "./view/template/footer.php"; ?>
 <script>
     $(document).ready(function () {
         $('#avbl_devices').DataTable({

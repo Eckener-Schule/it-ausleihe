@@ -1,6 +1,6 @@
 <?php
-require_once "./header.php";
-require_once "./navbar.php";
+require_once "./view/template/header.php";
+require_once "./view/template/navbar.php";
 ?>
 <main role="main" class="container">
     <div class="headline col-12">
@@ -51,4 +51,4 @@ require_once "./navbar.php";
         </div>
     </form>
 </main>
-<?php require_once "./footer.php";?>
+<?php require_once "./view/template/footer.php"; ?>

@@ -1,18 +1,20 @@
 <?php
-require_once "./header.php";
-require_once "./navbar.php";
+require_once "./_autoload.php";
+
+require_once "./view/template/header.php";
+require_once "./view/template/navbar.php";
 
 // Including of bootstrap-modals
-require_once "./modals/modal_admin_device.php";
-require_once "./modals/modal_history_device.php";
-require_once "./modals/modal_delete_device.php";
+require_once "./view/template/modal/modal_admin_device.php";
+require_once "./view/template/modal/modal_history_device.php";
+require_once "./view/template/modal/modal_delete_device.php";
 
-require_once "./modals/modal_admin_cart.php";
-require_once "./modals/modal_history_cart.php";
-require_once "./modals/modal_delete_cart.php";
+require_once "./view/template/modal/modal_admin_cart.php";
+require_once "./view/template/modal/modal_history_cart.php";
+require_once "./view/template/modal/modal_delete_cart.php";
 
-require_once "./modals/modal_add_cart.php";
-require_once "./modals/modal_add_device.php";
+require_once "./view/template/modal/modal_add_cart.php";
+require_once "./view/template/modal/modal_add_device.php";
 
 // Testdata for data to modal
 $cartID = "123456";
@@ -84,6 +86,7 @@ $cartID = "123456";
                         </button>
                         <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
                             <i class="fas fa-trash-alt"></i>
+
                         </button>
                     </td>
                 </tr>
@@ -93,8 +96,8 @@ $cartID = "123456";
         </button>
         </div>
     </div>
-</main>
-<?php require_once "./footer.php"; ?>
+</div>
+<?php require_once "./view/template/footer.php"; ?>
 <script>
     // Datatable attributes
     $(document).ready(function () {

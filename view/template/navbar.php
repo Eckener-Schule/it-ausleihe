@@ -1,5 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
-    <p class="navbar-brand-logo"></p><a class="navbar-brand" href="./"><h1>IT-Ausleihe</h1></a>
+
+<nav class="navbar navbar-expand-lg navbar-light eckener-moodle">
+    <p class="navbar-brand-logo"></p><a class="navbar-brand" href="/"><h1>IT-Ausleihe</h1></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
