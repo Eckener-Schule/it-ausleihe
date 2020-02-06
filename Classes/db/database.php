@@ -45,15 +45,14 @@ class Database
         $stmt = $this->pdo->prepare($query);
 
         // loop throught $params to validate if a param starts with ':'
+        $paramsNew = [];
         foreach ($params as $key => $value) 
         {
-            if(strpos($key == ':') == false) 
-            {
-                $key = ltrim($key ,':');
-            }
+            $key = ':'.ltrim($key, ':');
+            $paramsNew[$key] = $value;
         }
 
-            $stmt->execute($params);
+            $stmt->execute($paramsNew);
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             $stmt = null;
 
