@@ -35,7 +35,7 @@ class Device extends ActiveRecord
 
     /**
      * Qr code of the device
-     * @var string $qrCode
+     * @var int $qrCode
      */
     public $qrCode;
 
@@ -58,9 +58,9 @@ class Device extends ActiveRecord
      * @param string $name
      * @param int $cardId
      * @param string $brand
-     * @param string $qrCode
+     * @param int $qrCode
      */
-    public function __construct($deviceID, $type = "", $name = "", $cardId = 0, $brand = "", $qrCode = "")
+    public function __construct($deviceID, $type = "", $name = "", $cardId = 0, $brand = "", $qrCode = 0)
     {
         $this->setDeviceID($deviceID);
         $this->setType($type);
@@ -143,9 +143,9 @@ class Device extends ActiveRecord
     }
 
     /**
-     * @param string $qrCode
+     * @param int $qrCode
      */
-    public function setQrCode(string $qrCode)
+    public function setQrCode(int $qrCode)
     {
         $this->qrCode = $qrCode;
     }
@@ -184,7 +184,7 @@ class Device extends ActiveRecord
 
     public function save()
     {
-        if($this->update() == 0) {
+        if ($this->update() == 0) {
             $this->insert();
         }
     }
@@ -196,7 +196,7 @@ class Device extends ActiveRecord
             ":deviceID" => $this->getDeviceID()
         ];
         $query = 'DELETE FROM device WHERE 1 = 1 AND deviceID = :deviceID;';
-        $database->executeQuery($query,$params);
+        $database->executeQuery($query, $params);
     }
 
     protected function insert()
@@ -211,7 +211,7 @@ class Device extends ActiveRecord
             ":deviceID" => $this->getDeviceID()
         ];
         $query = 'INSERT INTO device (`deviceID`, `name`, `type`, `brand`, `qrCode`, `cartID`) VALUES (:deviceID, :name, :type, :brand, :qrCode, :cartID);';
-        $database->executeQuery($query,$params);
+        $database->executeQuery($query, $params);
 
     }
 
@@ -227,7 +227,7 @@ class Device extends ActiveRecord
             ":deviceID" => $this->getDeviceID()
         ];
         $query = 'UPDATE device SET type = :type, name = :name, brand = :brand, qrCode = :qrCode, cartID = :cartID WHERE 1 = 1 AND deviceID = :deviceID;';
-        $result = $database->executeQuery($query,$params);
+        $result = $database->executeQuery($query, $params);
         return $result->rowCount();
     }
 
