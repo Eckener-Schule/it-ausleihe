@@ -182,13 +182,21 @@ class Device extends ActiveRecord
         $this->link = $link;
     }
 
+    /**
+     * Saves the object into the database
+     */
     public function save()
     {
+        // Updates the database
         if ($this->update() == 0) {
+            // If no object was updated insert a new one
             $this->insert();
         }
     }
 
+    /**
+     * Deletes the device from the database by its id
+     */
     public function delete()
     {
         $database = Database::getDbConnection();
@@ -199,6 +207,9 @@ class Device extends ActiveRecord
         $database->executeQuery($query, $params);
     }
 
+    /**
+     * Inserts the object into the database
+     */
     protected function insert()
     {
         $database = Database::getDbConnection();
@@ -215,6 +226,10 @@ class Device extends ActiveRecord
 
     }
 
+    /**
+     * Updates the object inside the database and returns the affected rows
+     * @return int
+     */
     protected function update()
     {
         $database = Database::getDbConnection();
@@ -228,9 +243,16 @@ class Device extends ActiveRecord
         ];
         $query = 'UPDATE device SET type = :type, name = :name, brand = :brand, qrCode = :qrCode, cartID = :cartID WHERE 1 = 1 AND deviceID = :deviceID;';
         $result = $database->executeQuery($query, $params);
+
+        // Return count of the affected rows
         return $result->rowCount();
     }
 
+    /**
+     * Loads an new object by the id
+     * @param $id
+     * @return ActiveRecord
+     */
     static function load($id): ActiveRecord
     {
         $database = Database::getDbConnection();
@@ -239,8 +261,11 @@ class Device extends ActiveRecord
         ];
         $query = 'SELECT deviceID, type, name, brand, qrCode, cartID FROM device WHERE 1 = 1 AND deviceID = :deviceID;';
         $result = $database->executeQuery($query, $params);
+
+        // Check if the device exists inside the database
         if ($result->rowCount() > 0) {
             $device = $result->fetch(PDO::FETCH_ASSOC);
+            // Return loaded device
             return new Device(
                 $device["deviceID"],
                 $device["type"] ?? "",
@@ -250,6 +275,8 @@ class Device extends ActiveRecord
                 $device["qrCode"] ?? 0
             );
         }
+
+        // Return dummy device
         return new Device(0);
     }
 }
