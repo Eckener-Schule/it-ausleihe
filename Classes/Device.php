@@ -184,7 +184,9 @@ class Device extends ActiveRecord
 
     public function save()
     {
-        // TODO: Implement save() method.
+        if($this->update() == 0) {
+            $this->insert();
+        }
     }
 
     public function delete()
@@ -226,6 +228,7 @@ class Device extends ActiveRecord
         ];
         $query = 'UPDATE device SET type = :type, name = :name, brand = :brand, qrCode = :qrCode, cartID = :cartID WHERE 1 = 1 AND deviceID = :deviceID;';
         $result = $database->executeQuery($query,$params);
+        return $result->rowCount();
     }
 
     static function load($id): ActiveRecord
