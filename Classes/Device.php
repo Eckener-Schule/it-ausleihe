@@ -233,6 +233,23 @@ class Device extends ActiveRecord
 
     static function load($id): ActiveRecord
     {
-        // TODO: Implement load() method.
+        $database = Database::getDbConnection();
+        $params = [
+            ":deviceID" => $id,
+        ];
+        $query = 'SELECT deviceID, type, name, brand, qrCode, cartID FROM device WHERE 1 = 1 AND deviceID = :deviceID;';
+        $result = $database->executeQuery($query, $params);
+        if ($result->rowCount() > 0) {
+            $device = $result->fetch(PDO::FETCH_ASSOC);
+            return new Device(
+                $device["deviceID"],
+                $device["type"] ?? "",
+                $device["name"] ?? "",
+                $device["cardId"] ?? 0,
+                $device["brand"] ?? "",
+                $device["qrCode"] ?? 0
+            );
+        }
+        return new Device(0);
     }
 }
