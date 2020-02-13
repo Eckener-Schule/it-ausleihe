@@ -5,43 +5,136 @@
  * @author petersen
  * @author lehmann
  * @author jessen
+ * @author wiegand
  */
-class Borrower {
+class Borrower extends ActiveRecord {
 
-public $borrowerId;
-public $name; //First name of the borrower
-public $surname; //Last name of the borrower
-public $class; //Name of the class where the borrowed devices are used
-public $teacher; //Name of the teacher which is teaching the class
+    /**
+     * The ID from the datadase
+     * 
+     * @var int
+     */
+    private $borrowerId;
+    /**
+     * First name of the borrower
+     *
+     * @var string
+     */
+    private $name;
+    /**
+     * Last name of the borrower
+     * 
+     * @var string
+     */
+    private $surname;
+    /**
+     * Name of the class where the borrowed devices are used
+     * 
+     * @var string
+     */
+    private $class;
 
-
-public function __construct(){
-    //determine next borrowerId
-    $lastId = mysqli_query($connection, "SELECT COUNT(*) FROM Borrower");
-    $nextId = $lastId + 1;
-    $this->borrowerId = $nextId; //borrowerID determined based on last db-entry
-
-    $this->name = $_POST['name']; //Parameter of html form?
-    $this->surname = $_POST['surname']; //Parameter of html form?
-    $this->class = $_POST['class'];//Parameter of html form?
-    $this->teacher = $_POST['teacher']; ////Parameter of html form?
+    public function __construct()
+    {   
+        $this->database = Database::getDbConnection();
     }
     
-// Add a new borrower
-public function addBorrower($name, $surname, $class, $teacher) {
+    /**
+     * Loads the borrower entity with the id from the datadase
+     * 
+     * @param int $id
+     * @return ActiveRecord
+     */
+    public static function load($id): ActiveRecord
+    {
+        $query = "SELECT * FROM borrower WHERE borrowerId = ?;";
+        $params = array($id);
+        
+        $row = $this->database.executeQuery($query, $params);
+        
+        return $this->convert($row);
+    }
     
-}
+    private function convert($row)
+    {
+        $instance = new Borrower();
+        $instance->borrowerId = $row['borrowerId'];
+        $instance->setName($row['name']);
+        $instance->setSurname($row['surname']);
+        $instance->setClass($row['class']);
+        
+        return $instance;
+    }
 
-// delete a borrower
-public function deleteBorrower($borrowerID) {
+    public function save()
+    {
+        $borrower = Borrower::load($this->borrowerId);
+        
+        if($borrower === null) {
+            $this->insert();
+        }
+        else {
+            $this->update();
+        }
+    }
+
+    protected function insert()
+    {
+        $query = "INSERT INTO borrower (name, surname, class) VALUES (?, ?, ?);";
+        $params = array($this->name, $this->surname, $this->class);
+        
+        $this->database.executeQuery($query, $params);
+    }
+
+    protected function update()
+    {
+        $query = "UPDATE borrower SET name = ?, surname = ?, class = ?;";
+        $params = array($this->name, $this->surname, $this->class);
+        
+        $this->database.executeQuery($query, $params);
+    }
+
+    public function delete()
+    {
+        $query = "DELETE FROM borrower WHERE borrowerID = ?;";
+        $params = array($this->borrowerId);
+        
+        $this->database.executeQuery($query, $params);
+    }
     
-}
-
-// Modify a borrower
-public function modifyBorrower($name, $surname, $class, $teacher) {
+    public function getBorrowerId() 
+    {
+        return $this->borrowerId;
+    }
     
-}
-
-
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    
+    public function getName()
+    {
+        return $this->name;
+    }
+    
+    public function setSurname($surname)
+    {
+        $this->surname = $surname;
+    }
+    
+    public function getSurname()
+    {
+        return $this->surname;
+    }
+    
+    public function setClass($class)
+    {
+        $this->class = $class;
+    }
+    
+    public function getClass()
+    {
+        return $this->class;
+    }
 }
 ?>
