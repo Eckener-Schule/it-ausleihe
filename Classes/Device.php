@@ -191,7 +191,7 @@ class Device extends ActiveRecord
 
     public function delete()
     {
-        $database = new Database();
+        $database = Database::getDbConnection();
         $params = [
             ":deviceID" => $this->getDeviceID()
         ];
@@ -201,7 +201,7 @@ class Device extends ActiveRecord
 
     protected function insert()
     {
-        $database = new Database();
+        $database = Database::getDbConnection();
         $params = [
             ":type" => $this->getType(),
             ":name" => $this->getName(),
@@ -217,7 +217,7 @@ class Device extends ActiveRecord
 
     protected function update()
     {
-        $database = new Database();
+        $database = Database::getDbConnection();
         $params = [
             ":type" => $this->getType(),
             ":name" => $this->getName(),
