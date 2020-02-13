@@ -62,12 +62,12 @@ class Device extends ActiveRecord
      */
     public function __construct($deviceID, $type = "", $name = "", $cardId = 0, $brand = "", $qrCode = 0)
     {
-        $this->setDeviceID($deviceID);
+        $this->setDeviceID((int)$deviceID);
         $this->setType($type);
         $this->setName($name);
         $this->setBrand($brand);
         $this->setQrCode($qrCode);
-        $this->setCardId($cardId);
+        $this->setCardId((int)$cardId);
     }
 
     /**
