@@ -60,7 +60,7 @@ class Device extends ActiveRecord
      * @param string $brand
      * @param string $qrCode
      */
-    public function __construct($deviceID, $type, $name, $cardId, $brand = "", $qrCode = "")
+    public function __construct($deviceID, $type = "", $name = "", $cardId = 0, $brand = "", $qrCode = "")
     {
         $this->setDeviceID($deviceID);
         $this->setType($type);
