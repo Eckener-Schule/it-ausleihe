@@ -136,15 +136,5 @@ class Borrower extends ActiveRecord {
     {
         return $this->class;
     }
-    
-    public function setTeacher($teacher)
-    {
-        $this->teacher = $teacher;
-    }
-    
-    public function getTeacher()
-    {
-        return $this->teacher;
-    }
 }
 ?>
