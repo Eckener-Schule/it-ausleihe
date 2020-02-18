@@ -258,6 +258,10 @@ class Device extends ActiveRecord
         return new Device(0);
     }
 
+    /**
+     * Loads all devices and returns an array of devices
+     * @return array
+     */
     public static function loadAll() {
         $database = Database::getDbConnection();
         $devices = [];
