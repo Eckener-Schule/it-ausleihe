@@ -1,6 +1,7 @@
+
 <?php
 require('Database.php');
- 
+
 /**
  * Description of Cart
  *
@@ -8,19 +9,10 @@ require('Database.php');
  * @author lehmann
  * @author jessen
  * @author Leon Vagnoni
- * 
- * Class to configure the Cart in the database 
  */
 class Cart {
 
-public $cartId;
-public $devices; //Array of devices which are included in the cart
-public $name;   //name of the cart
-
-public function __construct() {
-
-}
-
+ public function __construct() {
     /**
      * @param $devices
      * @param $name
@@ -28,8 +20,7 @@ public function __construct() {
      */
 public function addCart($devices, $name) {
 
- 
-    
+
     for($i=0; $i<$devices;$i++) {
         $insert = "INSERT INTO 'cart' ('cartID', 'deviceID', 'name') VALUES (". $cartID .", ". $devices[$i] .", ". $name .")";
         $params = array( 
@@ -39,7 +30,7 @@ public function addCart($devices, $name) {
         $exporter = Database::getDbConnectiont();
         $exporter->executeQuery($insert, $params);
     }
-    
+
 
     }
 
@@ -49,8 +40,6 @@ public function addCart($devices, $name) {
      * searchs the typed cartID from the database
      */
 public function checkTotality($cartID) {
-
-
 
     $select = "SELECT 'cartID', 'deviceID' FROM 'cart' WHERE 'cartID' = ". $cartID;
     $params = array( 
@@ -66,7 +55,7 @@ public function checkTotality($cartID) {
      * delete the typed cartID from the database
      */
 public function deleteCart($cartID){
-  
+ 
     $params = array(
         "cardID" => $cartID,
     );
@@ -84,14 +73,13 @@ public function deleteCart($cartID){
      * modifys the typed mType,device and name from the database
      */
 public function modifyCart($mType, $device, $name){ //Modifies the database entry of the cart
-  
-
     if($mType == "add") {
         $modify = "INSERT INTO 'cart' ('cartID', 'deviceID', 'name') VALUES ( ". $cartID .", ". $devices .", ". $name .")";
     }
     else {
         $modify = "DELETE FROM 'cart' WHERE 'devieID' = ". $deviceID;
     }
+    $db->query($modify);
     $params = array( "mType" => $mType,
         "device" => $device,
         "name" => $name,
@@ -102,5 +90,3 @@ public function modifyCart($mType, $device, $name){ //Modifies the database entr
 }
 
 }
-
-?>
