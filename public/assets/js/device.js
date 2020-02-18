@@ -1,9 +1,7 @@
 $(".delete-device-button").on("click", function () {
-    var deviceType = $(this).data("device-type");
-    var deviceName = $(this).data("device-name");
-    var deviceId = $(this).data("device-id");
-    $("#delete-device-button").val(parseInt(deviceId));
-    $("#modal-deleted-device").text(deviceId);
-    $("#modal-name-device").text(deviceName);
-    $("#modal-type-device").text(deviceType);
+    var device = $(this).data("device");
+    $("#delete-device-button").val(parseInt(device.deviceID));
+    $("#modal-deleted-device").text(device.deviceID);
+    $("#modal-name-device").text(device.name);
+    $("#modal-type-device").text(device.type);
 });
