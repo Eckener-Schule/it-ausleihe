@@ -46,12 +46,6 @@ class Device extends ActiveRecord
     public $cardId;
 
     /**
-     * Link to show detail
-     * @var string $link
-     */
-    public $link;
-
-    /***
      * Create a new object from device.
      * @param int $deviceID
      * @param string $type
@@ -164,22 +158,6 @@ class Device extends ActiveRecord
     public function setCardId(int $cardId)
     {
         $this->cardId = $cardId;
-    }
-
-    /**
-     * @return string
-     */
-    public function getLink()
-    {
-        return $this->link;
-    }
-
-    /**
-     * @param string $link
-     */
-    public function setLink(string $link)
-    {
-        $this->link = $link;
     }
 
     /**
