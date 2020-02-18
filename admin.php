@@ -89,12 +89,14 @@ $cartID = "123456";
                 </tr>
                 </thead>
                 <tbody>
+
+                <?php foreach (Device::loadAll() as $device): ?>
                 <tr>
-                    <td>123456</td>
-                    <td>Notebook</td>
-                    <td>Acer</td>
-                    <td>Aspire 555</td>
-                    <td>7</td>
+                    <td><?= $device->getDeviceID() ?></td>
+                    <td><?= $device->getType() ?></td>
+                    <td><?= $device->getBrand() ?></td>
+                    <td><?= $device->getName() ?></td>
+                    <td><?= $device->getCardId() ?></td>
                     <td class="function-icon">
                         <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
                             <i class="fas fa-edit"></i>
@@ -108,6 +110,7 @@ $cartID = "123456";
                         </button>
                     </td>
                 </tr>
+                <?php endforeach; ?>
             </table>
         </div>
     </div>
