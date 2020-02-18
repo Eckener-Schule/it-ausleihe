@@ -59,9 +59,10 @@ class Borrower extends ActiveRecord {
         );
         
         $db = Database::getDbConnection();
-        $rows = $db->executeQuery($query, $params);
+        $stmt = $db->executeQuery($query, $params);
+        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
-        if(count($rows) === 0) {
+        if($rows === false || count($rows) === 0) {
             return null;
         }
         
