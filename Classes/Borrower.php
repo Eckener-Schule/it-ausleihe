@@ -45,20 +45,27 @@ class Borrower extends ActiveRecord {
      * @param int $id
      * @return ActiveRecord
      */
-    public static function load($id): ActiveRecord
+    public static function load($id)
     {
-        $query = "SELECT * FROM borrower WHERE borrowerId = ?;";
-        $params = array($id);
+        $query = "SELECT * FROM borrower WHERE borrowerID = :id;";
+        $params = array(
+            ':id' => $id
+        );
         
-        $row = $this->database.executeQuery($query, $params);
+        $db = Database::getDbConnection();
+        $rows = $db->executeQuery($query, $params);
         
-        return $this->convert($row);
+        if(count($rows) === 0) {
+            return null;
+        }
+        
+        return Borrower::convert($rows[0]);
     }
     
-    private function convert($row)
+    private static function convert($row)
     {
         $instance = new Borrower();
-        $instance->borrowerId = $row['borrowerId'];
+        $instance->borrowerId = $row['borrowerID'];
         $instance->setName($row['name']);
         $instance->setSurname($row['surname']);
         $instance->setClass($row['class']);
@@ -67,10 +74,8 @@ class Borrower extends ActiveRecord {
     }
 
     public function save()
-    {
-        $borrower = Borrower::load($this->borrowerId);
-        
-        if($borrower === null) {
+    {   
+        if($this->getBorrowerId() === null) {
             $this->insert();
         }
         else {
@@ -80,26 +85,39 @@ class Borrower extends ActiveRecord {
 
     protected function insert()
     {
-        $query = "INSERT INTO borrower (name, surname, class) VALUES (?, ?, ?);";
-        $params = array($this->name, $this->surname, $this->class);
+        $query = "INSERT INTO borrower (name, surname, class) VALUES (:name, :surname, :class);";
+        $params = array(
+            ':name' => $this->name, 
+            ':surname' => $this->surname, 
+            ':class' => $this->class
+        );
         
-        $this->database.executeQuery($query, $params);
+        $this->database->executeQuery($query, $params);
     }
 
     protected function update()
     {
-        $query = "UPDATE borrower SET name = ?, surname = ?, class = ?;";
-        $params = array($this->name, $this->surname, $this->class);
+        $query = "UPDATE borrower 
+            SET name = :name, surname = :surname, class = :class
+            WHERE borrowerID = :borrowerId;";
+        $params = array(
+            ':name' => $this->name, 
+            ':surname' => $this->surname, 
+            ':class' => $this->class,
+            ':borrowerId' => $this->borrowerId
+        );
         
-        $this->database.executeQuery($query, $params);
+        $this->database->executeQuery($query, $params);
     }
 
     public function delete()
     {
-        $query = "DELETE FROM borrower WHERE borrowerID = ?;";
-        $params = array($this->borrowerId);
+        $query = "DELETE FROM borrower WHERE borrowerID = :borrowerId;";
+        $params = array(
+            ':borrowerId' => $this->borrowerId
+        );
         
-        $this->database.executeQuery($query, $params);
+        $this->database->executeQuery($query, $params);
     }
     
     public function getBorrowerId() 
