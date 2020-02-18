@@ -96,7 +96,7 @@ $cartID = "123456";
                     <td><?= $device->getType() ?></td>
                     <td><?= $device->getBrand() ?></td>
                     <td><?= $device->getName() ?></td>
-                    <td><?= $device->getCardId() ?></td>
+                    <td><?= $device->getCartId() ?></td>
                     <td class="function-icon">
                         <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
                             <i class="fas fa-edit"></i>

@@ -41,27 +41,27 @@ class Device extends ActiveRecord
 
     /**
      * Id of the cart
-     * @var int $cardId
+     * @var int $cartId
      */
-    public $cardId;
+    public $cartId;
 
     /**
      * Create a new object from device.
      * @param int $deviceID
      * @param string $type
      * @param string $name
-     * @param int $cardId
+     * @param int $cartId
      * @param string $brand
      * @param int $qrCode
      */
-    public function __construct($deviceID, $type = "", $name = "", $cardId = 0, $brand = "", $qrCode = 0)
+    public function __construct($deviceID, $type = "", $name = "", $cartId = 0, $brand = "", $qrCode = 0)
     {
         $this->setDeviceID((int)$deviceID);
         $this->setType($type);
         $this->setName($name);
         $this->setBrand($brand);
         $this->setQrCode($qrCode);
-        $this->setCardId((int)$cardId);
+        $this->setCartId((int)$cartId);
     }
 
     /**
@@ -147,17 +147,17 @@ class Device extends ActiveRecord
     /**
      * @return int
      */
-    public function getCardId()
+    public function getCartId()
     {
-        return $this->cardId;
+        return $this->cartId;
     }
 
     /**
-     * @param int $cardId
+     * @param int $cartId
      */
-    public function setCardId(int $cardId)
+    public function setCartId(int $cartId)
     {
-        $this->cardId = $cardId;
+        $this->cartId = $cartId;
     }
 
     /**
@@ -196,7 +196,7 @@ class Device extends ActiveRecord
             ":name" => $this->getName(),
             ":brand" => $this->getBrand(),
             ":qrCode" => $this->getQrCode(),
-            ":cartID" => $this->getCardId(),
+            ":cartID" => $this->getCartId(),
             ":deviceID" => $this->getDeviceID()
         ];
         $query = 'INSERT INTO device (`deviceID`, `name`, `type`, `brand`, `qrCode`, `cartID`) VALUES (:deviceID, :name, :type, :brand, :qrCode, :cartID);';
@@ -216,7 +216,7 @@ class Device extends ActiveRecord
             ":name" => $this->getName(),
             ":brand" => $this->getBrand(),
             ":qrCode" => $this->getQrCode(),
-            ":cartID" => $this->getCardId(),
+            ":cartID" => $this->getCartId(),
             ":deviceID" => $this->getDeviceID()
         ];
         $query = 'UPDATE device SET type = :type, name = :name, brand = :brand, qrCode = :qrCode, cartID = :cartID WHERE 1 = 1 AND deviceID = :deviceID;';
@@ -248,7 +248,7 @@ class Device extends ActiveRecord
                 $device["deviceID"],
                 $device["type"] ?? "",
                 $device["name"] ?? "",
-                $device["cardId"] ?? 0,
+                $device["cartId"] ?? 0,
                 $device["brand"] ?? "",
                 $device["qrCode"] ?? 0
             );
@@ -272,7 +272,7 @@ class Device extends ActiveRecord
                 $device["deviceID"],
                 $device["type"] ?? "",
                 $device["name"] ?? "",
-                $device["cardId"] ?? 0,
+                $device["cartId"] ?? 0,
                 $device["brand"] ?? "",
                 $device["qrCode"] ?? 0
             );
