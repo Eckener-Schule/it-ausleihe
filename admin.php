@@ -12,7 +12,7 @@ if(isset($_POST["newDevice"]) && $_POST["newDevice"] == 1) {
     );
     $newDevice->save();
     // Temporary user notification while there is nothing like a notification service implemented
-    echo '<script>setTimeout(function() { alert("Device was added!"); }, 1000);</script>';
+    echo '<script>setTimeout(function() { alert("Device was added/updated!"); }, 1000);</script>';
 }
 
 if(isset($_POST["deleteDevice"]) && !empty($_POST["deleteDevice"])) {
@@ -104,13 +104,13 @@ $cartID = "123456";
                     <td><?= $device->getName() ?></td>
                     <td><?= $device->getCartId() ?></td>
                     <td class="function-icon">
-                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
+                        <button type="button" class="btn edit-device-button" data-toggle="modal" data-target="#modal_admin_device" data-device='<?= json_encode($device) ?>' >
                             <i class="fas fa-edit"></i>
                         </button>
                         <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
                             <i class="fas fa-eye"></i>
                         </button>
-                            <button type="submit" data-device='<?= json_encode($device) ?>' name="deleteDevice" class="btn delete-device-button" data-toggle="modal" data-target="#modal_delete_device">
+                            <button type="submit" data-device='<?= json_encode($device) ?>' class="btn delete-device-button" data-toggle="modal" data-target="#modal_delete_device">
                                 <i class="fas fa-trash-alt"></i>
                             </button>
                     </td>
