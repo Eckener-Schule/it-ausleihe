@@ -18,6 +18,7 @@ class Cart {
      * @param $name
      * adds a devices to the database 
      */
+ }
 public function addCart($devices, $name) {
 
 
@@ -79,7 +80,6 @@ public function modifyCart($mType, $device, $name){ //Modifies the database entr
     else {
         $modify = "DELETE FROM 'cart' WHERE 'devieID' = ". $deviceID;
     }
-    $db->query($modify);
     $params = array( "mType" => $mType,
         "device" => $device,
         "name" => $name,
