@@ -10,14 +10,16 @@
             <div class="modal-body text-center">
                 <p>Sind sie sicher das sie das unten genannte Gerät entfernen möchten ?</p>
                 <div class="modal-device">
-                    <span>Geräte-ID: </span>
-                    <span>Type: </span>
-                    <span>Name: </span>
+                    <div><strong>Geräte-ID:</strong> <span id="modal-deleted-device"></span></div>
+                    <div><strong>Type:</strong> <span id="modal-type-device"></span></div>
+                    <div><strong>Name:</strong> <span id="modal-name-device"></span></div>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Schliessen</button>
-                <button type="button" class="btn btn-primary">Löschen</button>
+                <form id="delete-device-form" method="post">
+                    <button id="delete-device-button" name="deleteDevice" value="0" type="submit" class="btn btn-primary">Löschen</button>
+                </form>
             </div>
         </div>
     </div>

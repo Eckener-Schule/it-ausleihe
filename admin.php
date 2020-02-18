@@ -110,11 +110,9 @@ $cartID = "123456";
                         <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
                             <i class="fas fa-eye"></i>
                         </button>
-                        <form method="post">
-                            <button type="submit" value="<?= $device->getDeviceID() ?>" name="deleteDevice" class="btn">
+                            <button type="submit" data-device-type="<?= $device->getType() ?>" data-device-name="<?= $device->getName() ?>" data-device-id="<?= $device->getDeviceID() ?>" name="deleteDevice" class="btn delete-device-button" data-toggle="modal" data-target="#modal_delete_device">
                                 <i class="fas fa-trash-alt"></i>
                             </button>
-                        </form>
                     </td>
                 </tr>
                 <?php endforeach; ?>
