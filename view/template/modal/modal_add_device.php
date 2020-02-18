@@ -31,7 +31,10 @@
                         </div>
                         <div class="form-group">
                             <label for="device-cart-id">Wagen-ID:</label>
-                            <input type="text" class="form-control" name="device-cart-id">
+                            <select class="form-control" name="device-cart-id">
+                                <!-- @ToDo Exchange static cart values with database data -->
+                                <option value="1">Cart 1</option>
+                            </select>
                         </div>
                     </div>
                 </div>
