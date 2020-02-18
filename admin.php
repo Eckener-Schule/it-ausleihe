@@ -11,6 +11,8 @@ if(isset($_POST["newDevice"]) && $_POST["newDevice"] == 1) {
             $_POST["device-brand"] ?? ""
     );
     $newDevice->save();
+    // Temporary user notification while there is nothing like a notification service implemented
+    echo '<script>setTimeout(function() { alert("Device was added!"); }, 1000);</script>';
 }
 
 
