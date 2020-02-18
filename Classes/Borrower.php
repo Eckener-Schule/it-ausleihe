@@ -40,6 +40,9 @@ class Borrower extends ActiveRecord {
      */
     private $database;
 
+    /**
+     * Initialized the database connection
+     */
     public function __construct()
     {   
         $this->database = Database::getDbConnection();
