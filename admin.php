@@ -40,7 +40,23 @@ $cartID = "123456";
                 <tr>
                     <td>1</td>
                     <td>Notebooks</td>
-                    <td>10</td>
+                    <td>15</td>
+                    <td class="function-icon">
+                        <button type="button" class="btn" data-toggle="modal" data-cartid="<?php echo $cartID; ?>" data-target="#modal_admin_cart">
+                        <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-cartid="<?php echo $cartID; ?>" data-target="#modal_history_cart">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-cartid="<?php echo $cartID; ?>" data-target="#modal_delete_cart">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Tablets</td>
+                    <td>5</td>
                     <td class="function-icon">
                         <button type="button" class="btn" data-toggle="modal" data-cartid="<?php echo $cartID; ?>" data-target="#modal_admin_cart">
                         <i class="fas fa-edit"></i>
@@ -75,11 +91,467 @@ $cartID = "123456";
                 </thead>
                 <tbody>
                 <tr>
-                    <td>123456</td>
+                    <td>10108</td>
                     <td>Notebook</td>
                     <td>Acer</td>
-                    <td>Aspire 555</td>
-                    <td>7</td>
+                    <td>Aspire 3</td>
+                    <td>1</td>
+                    <td class="function-icon">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
+                            <i class="fas fa-trash-alt"></i>
+
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10109</td>
+                    <td>Notebook</td>
+                    <td>Acer</td>
+                    <td>Aspire 3</td>
+                    <td>1</td>
+                    <td class="function-icon">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
+                            <i class="fas fa-trash-alt"></i>
+
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10087</td>
+                    <td>Notebook</td>
+                    <td>Acer</td>
+                    <td>Aspire 5</td>
+                    <td>1</td>
+                    <td class="function-icon">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
+                            <i class="fas fa-trash-alt"></i>
+
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10107</td>
+                    <td>Notebook</td>
+                    <td>Acer</td>
+                    <td>Aspire 1</td>
+                    <td>1</td>
+                    <td class="function-icon">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
+                            <i class="fas fa-trash-alt"></i>
+
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10099</td>
+                    <td>Notebook</td>
+                    <td>Acer</td>
+                    <td>Aspire 1</td>
+                    <td>1</td>
+                    <td class="function-icon">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
+                            <i class="fas fa-trash-alt"></i>
+
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10111</td>
+                    <td>Notebook</td>
+                    <td>Acer</td>
+                    <td>Aspire 7</td>
+                    <td>1</td>
+                    <td class="function-icon">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
+                            <i class="fas fa-trash-alt"></i>
+
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10102</td>
+                    <td>Notebook</td>
+                    <td>Dell</td>
+                    <td>5000 Serie</td>
+                    <td>1</td>
+                    <td class="function-icon">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
+                            <i class="fas fa-trash-alt"></i>
+
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10090</td>
+                    <td>Notebook</td>
+                    <td>Dell</td>
+                    <td>5000 Serie</td>
+                    <td>1</td>
+                    <td class="function-icon">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
+                            <i class="fas fa-trash-alt"></i>
+
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10094</td>
+                    <td>Notebook</td>
+                    <td>Dell</td>
+                    <td>7000 Serie</td>
+                    <td>1</td>
+                    <td class="function-icon">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
+                            <i class="fas fa-trash-alt"></i>
+
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10112</td>
+                    <td>Notebook</td>
+                    <td>Lenovo</td>
+                    <td>ThinkPad X1 Extreme</td>
+                    <td>1</td>
+                    <td class="function-icon">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
+                            <i class="fas fa-trash-alt"></i>
+
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10105</td>
+                    <td>Notebook</td>
+                    <td>Lenovo</td>
+                    <td>ThinkPad L590</td>
+                    <td>1</td>
+                    <td class="function-icon">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
+                            <i class="fas fa-trash-alt"></i>
+
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10191</td>
+                    <td>Notebook</td>
+                    <td>Lenovo</td>
+                    <td>ThinkPad T590</td>
+                    <td>1</td>
+                    <td class="function-icon">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
+                            <i class="fas fa-trash-alt"></i>
+
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10089</td>
+                    <td>Notebook</td>
+                    <td>Lenovo</td>
+                    <td>ThinkPad T590</td>
+                    <td>1</td>
+                    <td class="function-icon">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
+                            <i class="fas fa-trash-alt"></i>
+
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10086</td>
+                    <td>Notebook</td>
+                    <td>Apple</td>
+                    <td>MacBook Pro</td>
+                    <td>1</td>
+                    <td class="function-icon">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
+                            <i class="fas fa-trash-alt"></i>
+
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10110</td>
+                    <td>Notebook</td>
+                    <td>Apple</td>
+                    <td>MacBook Pro</td>
+                    <td>1</td>
+                    <td class="function-icon">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
+                            <i class="fas fa-trash-alt"></i>
+
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10103</td>
+                    <td>Notebook</td>
+                    <td>Apple</td>
+                    <td>MacBook Air</td>
+                    <td></td>
+                    <td class="function-icon">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
+                            <i class="fas fa-trash-alt"></i>
+
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10618</td>
+                    <td>Tablet</td>
+                    <td>Samsung</td>
+                    <td>Galaxy Tab S6 Wi-Fi</td>
+                    <td>2</td>
+                    <td class="function-icon">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
+                            <i class="fas fa-trash-alt"></i>
+
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10088</td>
+                    <td>Tablet</td>
+                    <td>Samsung</td>
+                    <td>Galaxy Tab S6 Wi-Fi</td>
+                    <td>2</td>
+                    <td class="function-icon">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
+                            <i class="fas fa-trash-alt"></i>
+
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10630</td>
+                    <td>Tablet</td>
+                    <td>Samsung</td>
+                    <td>Galaxy Tab S6 LTE</td>
+                    <td>2</td>
+                    <td class="function-icon">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
+                            <i class="fas fa-trash-alt"></i>
+
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10631</td>
+                    <td>Tablet</td>
+                    <td>Apple</td>
+                    <td>iPad</td>
+                    <td>2</td>
+                    <td class="function-icon">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
+                            <i class="fas fa-trash-alt"></i>
+
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10632</td>
+                    <td>Tablet</td>
+                    <td>Huawei</td>
+                    <td>MediaPad T5</td>
+                    <td>2</td>
+                    <td class="function-icon">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
+                            <i class="fas fa-trash-alt"></i>
+
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10633</td>
+                    <td>Tablet</td>
+                    <td>Huawei</td>
+                    <td>MediaPad M5</td>
+                    <td></td>
+                    <td class="function-icon">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
+                            <i class="fas fa-trash-alt"></i>
+
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10664</td>
+                    <td>Beamer</td>
+                    <td>Epson</td>
+                    <td>EH-TW9400W</td>
+                    <td></td>
+                    <td class="function-icon">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
+                            <i class="fas fa-trash-alt"></i>
+
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10093</td>
+                    <td>Beamer</td>
+                    <td>Epson</td>
+                    <td>EH-TW9400W</td>
+                    <td></td>
+                    <td class="function-icon">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
+                            <i class="fas fa-trash-alt"></i>
+
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10692</td>
+                    <td>Beamer</td>
+                    <td>Epson</td>
+                    <td>EH-TW7100</td>
+                    <td></td>
                     <td class="function-icon">
                         <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
                             <i class="fas fa-edit"></i>

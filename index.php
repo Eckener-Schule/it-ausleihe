@@ -26,7 +26,7 @@
                     <td>Aspire 1</td>
                 </tr>
                 <tr>
-                    <td>10108</td>
+                    <td>10109</td>
                     <td>Notebook</td>
                     <td>Acer</td>
                     <td>Aspire 3</td>
