@@ -36,8 +36,8 @@ class Loan
         } elseif (isset($_POST['c2'])) { //Checking checkbox2 - cart
             $this->cart = new Cart();
         }
-        */
         $this->borrower = new Borrower();
+        */
 
 //$this->loanReturnTime is initial because the device/cart is not returned yet.
 
@@ -56,18 +56,18 @@ class Loan
      * @param string $loanReturnTime the end of the loan
      * @return void
      */
-    public function addLoan($deviceID, $borrowerID, $comment = '', $loanTime, $loanReturnTime)
+    public function addLoan($deviceID, $borrowerID, $comment = '', $loanTime, $duration)
     {
 
         // create DateTime objects & create loan duration from loan & return time
         $startTimeObj   = date_create($loanTime);
-        $returnTimeObj  = date_create($loanReturnTime);
+        //$returnTimeObj  = date_create($loanReturnTime);
         // create strings for the query params
         $startTime      = $startTimeObj->format('Y-m-d H:i:s');
-        $returnTime     = $returnTimeObj->format('Y-m-d H:i:s');
+        //$returnTime     = $returnTimeObj->format('Y-m-d H:i:s');
         // difference between the loan time and the return time will be the duration in hours
-        $diff           = $startTimeObj->diff($returnTimeObj);
-        $duration       = $diff->format('%h');
+        //$diff           = $startTimeObj->diff($returnTimeObj);
+        //$duration       = $diff->format('%h');
 
         // the query to insert given data
         $query =    "INSERT INTO `loan` 
@@ -76,14 +76,12 @@ class Loan
                                     `borrowerID`, 
                                     `startTime`, 
                                     `duration`, 
-                                    `returnTime`, 
                                     `comment`
                     ) VALUES (
                                     NULL, 
                                     :borrowerID, 
                                     :startTime, 
                                     :duration, 
-                                    :returnTime, 
                                     :comment
                     )";
         // array of params for prepared statement
@@ -91,7 +89,6 @@ class Loan
             ':borrowerID'   => $borrowerID,
             ':startTime'    => $startTime,
             ':duration'     => $duration,
-            ':returnTime'   => $returnTime,
             ':comment'      => $comment
         ];
 
