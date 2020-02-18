@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.9.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Erstellungszeit: 14. Feb 2019 um 10:12
--- Server-Version: 10.1.36-MariaDB
--- PHP-Version: 7.2.11
+-- Host: localhost
+-- Generation Time: Feb 18, 2020 at 09:49 AM
+-- Server version: 10.3.20-MariaDB
+-- PHP Version: 7.4.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,25 +19,14 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Datenbank: `it-ausleihe`
+-- Database: `it-ausleihe`
 --
 
--- ------------------------------------------------------
+-- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `borrower`
+-- Table structure for table `borrower`
 --
-/*
-DROP TABLE `loan_device`;
-DROP TABLE `borrower`;
-DROP TABLE `device`;
-DROP TABLE `loan`;
-DROP TABLE `cart`;
-*/
-
-
-
-
 
 CREATE TABLE `borrower` (
   `borrowerID` int(11) NOT NULL COMMENT 'ID of the borrower',
@@ -50,7 +39,7 @@ CREATE TABLE `borrower` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `cart`
+-- Table structure for table `cart`
 --
 
 CREATE TABLE `cart` (
@@ -61,12 +50,12 @@ CREATE TABLE `cart` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `device`
+-- Table structure for table `device`
 --
 
 CREATE TABLE `device` (
   `deviceID` int(11) NOT NULL COMMENT 'ID of the device',
-  `cartID`int(11) NOT NULL COMMENT 'ID of the card',
+  `cartID` int(11) NOT NULL COMMENT 'ID of the card',
   `name` varchar(40) NOT NULL COMMENT 'Name of the device',
   `type` varchar(10) NOT NULL COMMENT 'Type of the device',
   `brand` varchar(20) NOT NULL COMMENT 'Brand of the device',
@@ -76,7 +65,7 @@ CREATE TABLE `device` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `loan`
+-- Table structure for table `loan`
 --
 
 CREATE TABLE `loan` (
@@ -88,30 +77,51 @@ CREATE TABLE `loan` (
   `comment` varchar(255) NOT NULL COMMENT 'Comment to the loan'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Table contains data of the loans';
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `loan_device`
+--
+
 CREATE TABLE `loan_device` (
-	`loan_deviceID`int(11) NOT NULL COMMENT 'ID of the loaned devices',
-	`loanID` int(11) NOT NULL COMMENT 'ID of the loan',
-	`deviceID` int(11) NOT NULL COMMENT 'ID of the device'
-);
+  `loan_deviceID` int(11) NOT NULL COMMENT 'ID of the loaned devices',
+  `loanID` int(11) NOT NULL COMMENT 'ID of the loan',
+  `deviceID` int(11) NOT NULL COMMENT 'ID of the device',
+  `cartID` int(2) DEFAULT NULL COMMENT 'ID of a cart'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Indizes der exportierten Tabellen
+-- Indexes for dumped tables
 --
 
 --
--- Indizes für die Tabelle `borrower`
+-- Indexes for table `borrower`
 --
 ALTER TABLE `borrower`
   ADD PRIMARY KEY (`borrowerID`);
 
 --
--- Indizes für die Tabelle `cart`
+-- Indexes for table `cart`
 --
 ALTER TABLE `cart`
   ADD PRIMARY KEY (`cartID`);
-  
+
 --
--- Indizes für die Tabelle `loan_device`
+-- Indexes for table `device`
+--
+ALTER TABLE `device`
+  ADD PRIMARY KEY (`deviceID`),
+  ADD KEY `cartID` (`cartID`);
+
+--
+-- Indexes for table `loan`
+--
+ALTER TABLE `loan`
+  ADD PRIMARY KEY (`loanID`),
+  ADD KEY `borrowerID` (`borrowerID`);
+
+--
+-- Indexes for table `loan_device`
 --
 ALTER TABLE `loan_device`
   ADD PRIMARY KEY (`loan_deviceID`),
@@ -119,70 +129,55 @@ ALTER TABLE `loan_device`
   ADD KEY `deviceID` (`deviceID`);
 
 --
--- Indizes für die Tabelle `device`
---
-ALTER TABLE `device`
-  ADD PRIMARY KEY (`deviceID`),
-  ADD KEY `cartID` (`cartID`);
-
---
--- Indizes für die Tabelle `loan`
---
-ALTER TABLE `loan`
-  ADD PRIMARY KEY (`loanID`),
-  ADD KEY `borrowerID` (`borrowerID`);
-
---
--- AUTO_INCREMENT für exportierte Tabellen
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT für Tabelle `borrower`
+-- AUTO_INCREMENT for table `borrower`
 --
 ALTER TABLE `borrower`
   MODIFY `borrowerID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID of the borrower';
 
 --
--- AUTO_INCREMENT für Tabelle `loan_device`
---
-ALTER TABLE `loan_device`
-  MODIFY `loan_deviceID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID of the loaned devices';
-
---
--- AUTO_INCREMENT für Tabelle `loan`
---
-ALTER TABLE `loan`
-  MODIFY `loanID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID of the loan';
-  
---
--- AUTO_INCREMENT für Tabelle `loan`
---
-ALTER TABLE `device`
-  MODIFY `deviceID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID of the device';
-  
---
--- AUTO_INCREMENT für Tabelle `loan`
+-- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
   MODIFY `cartID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID of the cart';
 
 --
--- Constraints der exportierten Tabellen
+-- AUTO_INCREMENT for table `device`
+--
+ALTER TABLE `device`
+  MODIFY `deviceID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID of the device';
+
+--
+-- AUTO_INCREMENT for table `loan`
+--
+ALTER TABLE `loan`
+  MODIFY `loanID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID of the loan';
+
+--
+-- AUTO_INCREMENT for table `loan_device`
+--
+ALTER TABLE `loan_device`
+  MODIFY `loan_deviceID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID of the loaned devices';
+
+--
+-- Constraints for dumped tables
 --
 
 --
--- Constraints der Tabelle `cart`
+-- Constraints for table `device`
 --
 ALTER TABLE `device`
   ADD CONSTRAINT `device_ibfk_1` FOREIGN KEY (`cartID`) REFERENCES `cart` (`cartID`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
--- Constraints der Tabelle `loan`
+-- Constraints for table `loan`
 --
 ALTER TABLE `loan`
   ADD CONSTRAINT `loan_ibfk_2` FOREIGN KEY (`borrowerID`) REFERENCES `borrower` (`borrowerID`) ON DELETE NO ACTION ON UPDATE CASCADE;
 COMMIT;
-
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
