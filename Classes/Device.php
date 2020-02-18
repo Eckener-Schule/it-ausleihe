@@ -41,27 +41,27 @@ class Device extends ActiveRecord
 
     /**
      * Id of the cart
-     * @var int $cartId
+     * @var int $cartID
      */
-    public $cartId;
+    public $cartID;
 
     /**
      * Create a new object from device.
      * @param int $deviceID
      * @param string $type
      * @param string $name
-     * @param int $cartId
+     * @param int $cartID
      * @param string $brand
      * @param int $qrCode
      */
-    public function __construct($deviceID, $type = "", $name = "", $cartId = 0, $brand = "", $qrCode = 0)
+    public function __construct($deviceID, $type = "", $name = "", $cartID = 0, $brand = "", $qrCode = 0)
     {
         $this->setDeviceID((int)$deviceID);
         $this->setType($type);
         $this->setName($name);
         $this->setBrand($brand);
         $this->setQrCode($qrCode);
-        $this->setCartId((int)$cartId);
+        $this->setCartId((int)$cartID);
     }
 
     /**
@@ -149,15 +149,15 @@ class Device extends ActiveRecord
      */
     public function getCartId()
     {
-        return $this->cartId;
+        return $this->cartID;
     }
 
     /**
-     * @param int $cartId
+     * @param int $cartID
      */
-    public function setCartId(int $cartId)
+    public function setCartId(int $cartID)
     {
-        $this->cartId = $cartId;
+        $this->cartID = $cartID;
     }
 
     /**
@@ -248,7 +248,7 @@ class Device extends ActiveRecord
                 $device["deviceID"],
                 $device["type"] ?? "",
                 $device["name"] ?? "",
-                $device["cartId"] ?? 0,
+                $device["cartID"] ?? 0,
                 $device["brand"] ?? "",
                 $device["qrCode"] ?? 0
             );
@@ -272,7 +272,7 @@ class Device extends ActiveRecord
                 $device["deviceID"],
                 $device["type"] ?? "",
                 $device["name"] ?? "",
-                $device["cartId"] ?? 0,
+                $device["cartID"] ?? 0,
                 $device["brand"] ?? "",
                 $device["qrCode"] ?? 0
             );
