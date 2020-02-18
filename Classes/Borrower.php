@@ -16,13 +16,13 @@ class Borrower extends ActiveRecord {
      */
     private $borrowerId;
     /**
-     * First name of the borrower
+     * Firstname of the borrower
      *
      * @var string
      */
     private $name;
     /**
-     * Last name of the borrower
+     * Lastname of the borrower
      * 
      * @var string
      */
@@ -33,6 +33,12 @@ class Borrower extends ActiveRecord {
      * @var string
      */
     private $class;
+    /**
+     * The connection to the database
+     * 
+     * @var Database
+     */
+    private $database;
 
     public function __construct()
     {   
@@ -62,6 +68,12 @@ class Borrower extends ActiveRecord {
         return Borrower::convert($rows[0]);
     }
     
+    /**
+     * Converts an array loaded from the database to an instance of the Borrower-class
+     * 
+     * @param array $row
+     * @return Borrower
+     */
     private static function convert($row)
     {
         $instance = new Borrower();
@@ -73,6 +85,13 @@ class Borrower extends ActiveRecord {
         return $instance;
     }
 
+    /**
+     * Inserts the borrower into the database if the borrower does not already exists 
+     * or updates the existing borrower
+     * 
+     * {@inheritDoc}
+     * @see ActiveRecord::save()
+     */
     public function save()
     {   
         if($this->getBorrowerId() === null) {
@@ -83,6 +102,12 @@ class Borrower extends ActiveRecord {
         }
     }
 
+    /**
+     * Inserts the borrower into the database
+     * 
+     * {@inheritDoc}
+     * @see ActiveRecord::insert()
+     */
     protected function insert()
     {
         $query = "INSERT INTO borrower (name, surname, class) VALUES (:name, :surname, :class);";
@@ -95,6 +120,12 @@ class Borrower extends ActiveRecord {
         $this->database->executeQuery($query, $params);
     }
 
+    /**
+     * Updates the borrower in the database
+     * 
+     * {@inheritDoc}
+     * @see ActiveRecord::update()
+     */
     protected function update()
     {
         $query = "UPDATE borrower 
@@ -110,6 +141,12 @@ class Borrower extends ActiveRecord {
         $this->database->executeQuery($query, $params);
     }
 
+    /**
+     * Deletes the borrower in the database
+     * 
+     * {@inheritDoc}
+     * @see ActiveRecord::delete()
+     */
     public function delete()
     {
         $query = "DELETE FROM borrower WHERE borrowerID = :borrowerId;";
@@ -120,36 +157,63 @@ class Borrower extends ActiveRecord {
         $this->database->executeQuery($query, $params);
     }
     
+    /**
+     * @return int - the ID of the borrower
+     */
     public function getBorrowerId() 
     {
         return $this->borrowerId;
     }
     
+    /**
+     * Sets the firstname of the borrower
+     * 
+     * @param string $name
+     */
     public function setName($name)
     {
         $this->name = $name;
     }
     
+    /**
+     * @return string - the firstname of the borrower
+     */
     public function getName()
     {
         return $this->name;
     }
     
+    /**
+     * Sets the lastname of the borrower
+     * 
+     * @param string $surname
+     */
     public function setSurname($surname)
     {
         $this->surname = $surname;
     }
     
+    /**
+     * @return string - the lastname of the borrower
+     */
     public function getSurname()
     {
         return $this->surname;
     }
     
+    /**
+     * Sets the class of the borrower
+     * 
+     * @param string $class
+     */
     public function setClass($class)
     {
         $this->class = $class;
     }
     
+    /**
+     * @return string - the class of the borrower
+     */
     public function getClass()
     {
         return $this->class;
