@@ -1,6 +1,19 @@
 <?php
 require_once "./_autoload.php";
 
+// Check if a new device should be inserted
+if(isset($_POST["newDevice"]) && $_POST["newDevice"] == 1) {
+    $newDevice = new Device(
+            $_POST["device-id"],
+            $_POST["device-type"] ?? 0,
+            $_POST["device-name"] ?? 0,
+            $_POST["device-cart-id"] ?? 0,
+            $_POST["device-brand"] ?? ""
+    );
+    $newDevice->save();
+}
+
+
 require_once "./view/template/header.php";
 require_once "./view/template/navbar.php";
 

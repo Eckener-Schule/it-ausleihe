@@ -1,6 +1,7 @@
 <div class="modal fade" id="modal_add_device" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
-        <form class="modal-content">
+        <form class="modal-content" method="post">
+            <input type="hidden" name="newDevice" value="1">
             <div class="modal-header">
                 <h5 class="modal-title">Gerät anlegen:</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -31,10 +32,6 @@
                         <div class="form-group">
                             <label for="device-cart-id">Wagen-ID:</label>
                             <input type="text" class="form-control" name="device-cart-id">
-                        </div>
-                        <div class="form-group">
-                            <label class="device-link">Link:</label>
-                            <input type="text" class="form-control" name="device-link">
                         </div>
                     </div>
                 </div>
