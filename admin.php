@@ -15,6 +15,12 @@ if(isset($_POST["newDevice"]) && $_POST["newDevice"] == 1) {
     echo '<script>setTimeout(function() { alert("Device was added!"); }, 1000);</script>';
 }
 
+if(isset($_POST["deleteDevice"]) && !empty($_POST["deleteDevice"])) {
+    $deletedDevice = new Device($_POST["deleteDevice"]);
+    $deletedDevice->delete();
+    echo '<script>setTimeout(function() { alert("Device with ID '. $deletedDevice->getDeviceID() .' was deleted!"); }, 1000);</script>';
+}
+
 
 require_once "./view/template/header.php";
 require_once "./view/template/navbar.php";
@@ -104,10 +110,11 @@ $cartID = "123456";
                         <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
                             <i class="fas fa-eye"></i>
                         </button>
-                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
-                            <i class="fas fa-trash-alt"></i>
-
-                        </button>
+                        <form method="post">
+                            <button type="submit" value="<?= $device->getDeviceID() ?>" name="deleteDevice" class="btn">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </form>
                     </td>
                 </tr>
                 <?php endforeach; ?>
