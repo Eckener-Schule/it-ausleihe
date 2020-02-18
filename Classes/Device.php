@@ -257,4 +257,28 @@ class Device extends ActiveRecord
         // Return dummy device
         return new Device(0);
     }
+
+    public static function loadAll() {
+        $database = Database::getDbConnection();
+        $devices = [];
+        $query = 'SELECT deviceID, type, name, brand, qrCode, cartID FROM device;';
+        $result = $database->executeQuery($query, []);
+
+        // Iterate through all query results
+        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+            $device = $row;
+            // Load new device and add it to devices array
+            $devices[] = new Device(
+                $device["deviceID"],
+                $device["type"] ?? "",
+                $device["name"] ?? "",
+                $device["cardId"] ?? 0,
+                $device["brand"] ?? "",
+                $device["qrCode"] ?? 0
+            );
+        }
+
+        // Return all devices
+        return $devices;
+    }
 }
