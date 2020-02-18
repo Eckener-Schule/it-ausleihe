@@ -51,13 +51,11 @@ class Database
             }
 
             $stmt->execute($paramsNew);
-            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            $stmt = null;
 
         } catch (PDOExeption $e) {
             die('Database error: ' . $e->getMessage());
         }
-        return $result;
+        return $stmt;
     }
 
 
