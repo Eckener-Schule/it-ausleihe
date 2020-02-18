@@ -8,6 +8,8 @@ require('Database.php');
  * @author lehmann
  * @author jessen
  * @author Leon Vagnoni
+ * 
+ * Class to configure the Cart in the database 
  */
 class Cart {
 
