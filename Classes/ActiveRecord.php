@@ -2,8 +2,6 @@
 /**
  * Active Record is a design pattern 
  * that allows you to change data in a database by using an Object.
- * 
- * @author Leon Vagnoni
 **/
 abstract class ActiveRecord
 {
