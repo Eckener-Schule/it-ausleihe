@@ -25,19 +25,19 @@
             <li class="nav-item <?php if ($path == "admin") {
                 echo "active";
             }; ?>">
-                <a class="nav-link" href="./admin">Verwaltung</a>
+                <a class="nav-link" href="./admin.php">Verwaltung</a>
             </li>
 
             <li class="nav-item <?php if ($path == "loan") {
                 echo "active";
             }; ?>">
-                <a class="nav-link" href="./loan">Ausleihen</a>
+                <a class="nav-link" href="./loan.php">Ausleihen</a>
             </li>
 
             <li class="nav-item <?php if ($path == "return") {
                 echo "active";
             }; ?>">
-                <a class="nav-link" href="./return">Rücknahme</a>
+                <a class="nav-link" href="./return.php">Rücknahme</a>
             </li>
         </ul>
     </div>
