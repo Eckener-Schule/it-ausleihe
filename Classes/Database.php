@@ -1,5 +1,5 @@
 <?php
-
+require_once BASEPATH.DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'config.php';
 /**
  * Class to connect to the database and execute a query
  *
@@ -7,10 +7,10 @@
  */
 class Database
 {
-    private $database = "MYSQL_DATABASE";
-    private $user = "MYSQL_USER";
-    private $password = "MYSQL_PASSWORD";
-    private $host = "MYSQL_HOST";
+    private $database   = MYSQL_DATABASE;
+    private $user       = MYSQL_USER;
+    private $password   = MYSQL_PASSWORD;
+    private $host       = MYSQL_HOST;
     private $pdo;
     public static $connection;
 
@@ -51,13 +51,11 @@ class Database
             }
 
             $stmt->execute($paramsNew);
-            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            $stmt = null;
 
         } catch (PDOExeption $e) {
             die('Database error: ' . $e->getMessage());
         }
-        return $result;
+        return $stmt;
     }
 
 
