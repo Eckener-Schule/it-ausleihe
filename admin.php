@@ -61,7 +61,23 @@ $cartID = "123456";
                 <tr>
                     <td>1</td>
                     <td>Notebooks</td>
-                    <td>10</td>
+                    <td>15</td>
+                    <td class="function-icon">
+                        <button type="button" class="btn" data-toggle="modal" data-cartid="<?php echo $cartID; ?>" data-target="#modal_admin_cart">
+                        <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-cartid="<?php echo $cartID; ?>" data-target="#modal_history_cart">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-cartid="<?php echo $cartID; ?>" data-target="#modal_delete_cart">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Tablets</td>
+                    <td>5</td>
                     <td class="function-icon">
                         <button type="button" class="btn" data-toggle="modal" data-cartid="<?php echo $cartID; ?>" data-target="#modal_admin_cart">
                         <i class="fas fa-edit"></i>
