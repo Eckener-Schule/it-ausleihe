@@ -1,6 +1,6 @@
 
 <nav class="navbar navbar-expand-lg navbar-light eckener-moodle">
-    <p class="navbar-brand-logo"></p><a class="navbar-brand" href="/"><h1>IT-Ausleihe</h1></a>
+    <p class="navbar-brand-logo"></p><a class="navbar-brand" href="./"><h1>IT-Ausleihe</h1></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -25,19 +25,19 @@
             <li class="nav-item <?php if ($path == "admin") {
                 echo "active";
             }; ?>">
-                <a class="nav-link" href="./admin">Verwaltung</a>
+                <a class="nav-link" href="./admin.php">Verwaltung</a>
             </li>
 
             <li class="nav-item <?php if ($path == "loan") {
                 echo "active";
             }; ?>">
-                <a class="nav-link" href="./loan">Ausleihen</a>
+                <a class="nav-link" href="./loan.php">Ausleihen</a>
             </li>
 
             <li class="nav-item <?php if ($path == "return") {
                 echo "active";
             }; ?>">
-                <a class="nav-link" href="./return">Rücknahme</a>
+                <a class="nav-link" href="./return.php">Rücknahme</a>
             </li>
         </ul>
     </div>

@@ -31,9 +31,45 @@ First the project is presented under [https://github.com/Eckener-Schule/it-ausle
 $ git clone https://github.com/Eckener-Schule/it-ausleihe.git
 ```
 The scheme of the database is then imported. 
-In the directory "config", the file "example.php" needs to be renamed to "config.php" and edited. 
-This file must contain the access data for the database. 
-Finally the database must be maintained.  
+A database has to be created: CREATE DATABASE 'IT-Ausleihe';
+In the directory "config", the file "config.php.dist" needs to be renamed to "config.php".
+This file is needed to create the database connection.
+Next create the tables: use the SQL-script which can be find in the directory "install".
+USE it-ausleihe to run the script on the right database then import the SQL-script.
+
+## Require classes
+The _autoload.php file require all classes.
+
+## Main classes
+We created five classes which build our basic structure.
+They called: "Borrower", "Cart", "Device", "Loan", "Database".
+
+## Connection to the database
+How to connect to the database can be look up into the folder "classes".
+Here is an class "database".
+This class have a constructor which creates the database connection by execute a query with prepared statements.
+
+The data which are needed to connect have to set into the config.php.dist file.
+Like databasename, user, password and the host. After define your db credentials, remove the ".dist".
+
+## Control of the database
+We control the access to the databse with an abstract class called "ActiveRecord".
+So we want to modify some data, the ActiveRecord class will manage it (save(), delete(), insert(),update()).
+This class is created by the singelton pattern. 
+It can be find into the folder "classes".
+
+## Structure
+For a better understanding of the databasestructur, we created an ER-Modell.
+Furtheremore we created a class-diagram based on the UML notation.
+This can be finding into the folder "docs". 
+There you also can find the sql-script which created the database.
+
+## Design
+The webpage is designed by "Bootstrap" and "Fontawesome". The code and icons can be find into the "public/assets" folder.
+
+## Templates
+There are templates in the "view" directory for "footer", "header" and the "navbar".
+Furthermore there is a folder "modal". There are the templates for adding, delete, admin or a history of a device or a cart.
 
 ## Authors
 Maximilian Lembke  

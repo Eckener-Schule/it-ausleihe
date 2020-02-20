@@ -1,6 +1,27 @@
 <?php
 require_once "./_autoload.php";
 
+// Check if a new device should be inserted
+if(isset($_POST["newDevice"]) && $_POST["newDevice"] == 1) {
+    $newDevice = new Device(
+            $_POST["device-id"],
+            $_POST["device-type"] ?? 0,
+            $_POST["device-name"] ?? 0,
+            $_POST["device-cart-id"] ?? 0,
+            $_POST["device-brand"] ?? ""
+    );
+    $newDevice->save();
+    // Temporary user notification while there is nothing like a notification service implemented
+    echo '<script>setTimeout(function() { alert("Device was added/updated!"); }, 1000);</script>';
+}
+
+if(isset($_POST["deleteDevice"]) && !empty($_POST["deleteDevice"])) {
+    $deletedDevice = new Device($_POST["deleteDevice"]);
+    $deletedDevice->delete();
+    echo '<script>setTimeout(function() { alert("Device with ID '. $deletedDevice->getDeviceID() .' was deleted!"); }, 1000);</script>';
+}
+
+
 require_once "./view/template/header.php";
 require_once "./view/template/navbar.php";
 
@@ -40,7 +61,23 @@ $cartID = "123456";
                 <tr>
                     <td>1</td>
                     <td>Notebooks</td>
-                    <td>10</td>
+                    <td>15</td>
+                    <td class="function-icon">
+                        <button type="button" class="btn" data-toggle="modal" data-cartid="<?php echo $cartID; ?>" data-target="#modal_admin_cart">
+                        <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-cartid="<?php echo $cartID; ?>" data-target="#modal_history_cart">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn" data-toggle="modal" data-cartid="<?php echo $cartID; ?>" data-target="#modal_delete_cart">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Tablets</td>
+                    <td>5</td>
                     <td class="function-icon">
                         <button type="button" class="btn" data-toggle="modal" data-cartid="<?php echo $cartID; ?>" data-target="#modal_admin_cart">
                         <i class="fas fa-edit"></i>
@@ -74,25 +111,27 @@ $cartID = "123456";
                 </tr>
                 </thead>
                 <tbody>
+
+                <?php foreach (Device::loadAll() as $device): ?>
                 <tr>
-                    <td>123456</td>
-                    <td>Notebook</td>
-                    <td>Acer</td>
-                    <td>Aspire 555</td>
-                    <td>7</td>
+                    <td><?= $device->getDeviceID() ?></td>
+                    <td><?= $device->getType() ?></td>
+                    <td><?= $device->getBrand() ?></td>
+                    <td><?= $device->getName() ?></td>
+                    <td><?= $device->getCartId() ?></td>
                     <td class="function-icon">
-                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_admin_device">
+                        <button type="button" class="btn edit-device-button" data-toggle="modal" data-target="#modal_admin_device" data-device='<?= json_encode($device) ?>' >
                             <i class="fas fa-edit"></i>
                         </button>
                         <button type="button" class="btn" data-toggle="modal" data-target="#modal_history_device">
                             <i class="fas fa-eye"></i>
                         </button>
-                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_delete_device">
-                            <i class="fas fa-trash-alt"></i>
-
-                        </button>
+                            <button type="submit" data-device='<?= json_encode($device) ?>' class="btn delete-device-button" data-toggle="modal" data-target="#modal_delete_device">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
                     </td>
                 </tr>
+                <?php endforeach; ?>
             </table>
         </div>
     </div>
