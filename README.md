@@ -37,35 +37,36 @@ This file is needed to create the database connection.
 Next create the tables: use the SQL-script which can be find in the directory "install".
 USE it-ausleihe to run the script on the right database then import the SQL-script.
 
-## Require classes
-The _autoload.php file require all classes.
+## Class dependencies
+The _autoload.php file loads all class dependencies.
 
 ## Main classes
-We created five classes which build our basic structure.
-They called: "Borrower", "Cart", "Device", "Loan", "Database".
+The basic structure consists of five different classes to handle all functionalities.
+They are called: "Borrower", "Cart", "Device", "Loan" and "Database".
 
 ## Connection to the database
-How to connect to the database can be look up into the folder "classes".
-Here is an class "database".
-This class have a constructor which creates the database connection by execute a query with prepared statements.
+How to connect to the database can be inferred in the file "classes\database.php".
+This class has a constructor which creates the database connection by executing a query with prepared statements.
 
-The data which are needed to connect have to set into the config.php.dist file.
-Like databasename, user, password and the host. After define your db credentials, remove the ".dist".
+The user data needed to connect has been provided in the "config.php.dist" file.
+Required are "databasename", "user", "password" and "host". After defining your database credentials, remove the ".dist".
 
 ## Control of the database
 We control the access to the databse with an abstract class called "ActiveRecord".
-So we want to modify some data, the ActiveRecord class will manage it (save(), delete(), insert(),update()).
-This class is created by the singelton pattern. 
-It can be find into the folder "classes".
+If we want to modify some data, the ActiveRecord class will manage all db operations (like save(), delete(), insert(),update()).
+This behavior is consistent with the singelton pattern.
+The file can be found under "classes\ActiveRecord.php".
 
 ## Structure
-For a better understanding of the databasestructur, we created an ER-Modell.
-Furtheremore we created a class-diagram based on the UML notation.
-This can be finding into the folder "docs". 
-There you also can find the sql-script which created the database.
+For a better understanding of the database structure, we created an updated ER-Model.
+Further documentation has been created using a class-diagram based on the UML notation.
+All relevant documentation can be found in the folder "docs".
+There you also can find the sql-script which creates the database.
 
 ## Design
-The webpage is designed by "Bootstrap" and "Fontawesome". The code and icons can be find into the "public/assets" folder.
+The webpage design has originally been craeted using "Bootstrap".
+Later, the "Fontawesome" framework was implemented to improve visualization further.
+The code and icons can be find into the "public/assets" folder.
 
 ## Templates
 There are templates in the "view" directory for "footer", "header" and the "navbar".
