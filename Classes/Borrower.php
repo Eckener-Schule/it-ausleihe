@@ -40,6 +40,9 @@ class Borrower extends ActiveRecord {
      */
     private $database;
 
+    /**
+     * Initialized the database connection
+     */
     public function __construct()
     {   
         $this->database = Database::getDbConnection();
@@ -96,7 +99,7 @@ class Borrower extends ActiveRecord {
     public function save()
     {   
         if($this->getBorrowerId() === null) {
-            $this->insert();
+            return $this->insert();
         }
         else {
             $this->update();
@@ -118,7 +121,12 @@ class Borrower extends ActiveRecord {
             ':class' => $this->class
         );
         
-        $this->database->executeQuery($query, $params);
+        $stmt = $this->database->executeQuery($query, $params);
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+        if($result !== false) {
+            return $this->database->pdo->lastInsertId();
+        }
     }
 
     /**
