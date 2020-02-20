@@ -53,7 +53,7 @@ Required are "databasename", "user", "password" and "host". After defining your 
 
 ## Control of the database
 We control the access to the databse with an abstract class called "ActiveRecord".  
-If we want to modify some data, the ActiveRecord class will manage all db operations (like save(), delete(), insert(),update()).  
+The ActiveRecord class will manage all db operations (like save(), delete(), insert(),update()).  
 This behavior is consistent with the singelton pattern.  
 The file can be found under "classes\ActiveRecord.php".  
 
