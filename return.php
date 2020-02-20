@@ -39,7 +39,7 @@ $(document).ready(function () {
             <div class="alert alert-danger" role="alert" id="error" style="display: none;">
                 Bitte füllen Sie nur ein Feld aus. 
             </div>
-                <button type="submit" class="btn btn-primary" id="senden">Senden</button>
+                <button disabled="disabled" type="submit" class="btn btn-primary" id="senden">Senden</button>
             </div>
         </div>
     </form>
