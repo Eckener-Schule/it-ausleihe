@@ -55,7 +55,7 @@ require_once "./view/template/modal/modal_add_device.php";
 <main role="main" class="container">
     <div class="row">
         <div class="col">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_add_cart">
+        <button disabled="disabled" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_add_cart">
                 <i class="fas fa-plus-square"></i> Wagen anlegen
             </button>
             <h4>Wagen verwalten:</h4>
@@ -106,7 +106,7 @@ require_once "./view/template/modal/modal_add_device.php";
     </div>
     <div class="row">
         <div class="col">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_add_device">
+        <button disabled="disabled" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_add_device">
             <i class="fas fa-plus-square"></i> Gerät anlegen
         </button>
             <h4>Geräte verwalten:</h4>

@@ -50,7 +50,7 @@ $Loan = new Loan(Database::getDbConnection());
                 </div>
             </div>
             <div class="col-12 text-center">
-                <button type="submit" class="btn btn-primary">Senden</button>
+                <button disabled="disabled" type="submit" class="btn btn-primary">Senden</button>
             </div>
         </div>
     </form>
