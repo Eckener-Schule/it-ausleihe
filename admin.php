@@ -1,4 +1,11 @@
 <?php
+/**
+ * Description of admin
+ *
+ * @author Jacob Prütz
+ * @author Maximilian Lembke
+ */
+
 require_once "./_autoload.php";
 
 require_once "./view/template/header.php";
@@ -16,8 +23,13 @@ require_once "./view/template/modal/modal_delete_cart.php";
 require_once "./view/template/modal/modal_add_cart.php";
 require_once "./view/template/modal/modal_add_device.php";
 
-// Testdata for data to modal
-$cartID = "123456";
+
+$Cart = new Cart();
+
+if($_POST['do']==="addCart"){ 
+    $Cart->addCart($_POST['cart-device'], $_POST['cart-id'], $_POST['cart-name']);
+} 
+
 
 ?>
 <main role="main" class="container">
