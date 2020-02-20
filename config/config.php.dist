@@ -2,7 +2,7 @@
 /**
  * define your db credentials here and change the file to config.php (removing the ".dist" part)
  */
-define("MYSQL_DATABASE",    "schule");
+define("MYSQL_DATABASE",    "it-ausleihe");
 define("MYSQL_USER",        "schule");
 define("MYSQL_PASSWORD",    "Schul_Password_123");
 define("MYSQL_HOST",        "127.0.0.1");

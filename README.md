@@ -31,9 +31,46 @@ First the project is presented under [https://github.com/Eckener-Schule/it-ausle
 $ git clone https://github.com/Eckener-Schule/it-ausleihe.git
 ```
 The scheme of the database is then imported. 
-In the directory "config", the file "example.php" needs to be renamed to "config.php" and edited. 
-This file must contain the access data for the database. 
-Finally the database must be maintained.  
+A database has to be created: CREATE DATABASE 'IT-Ausleihe';
+In the directory "config", the file "config.php.dist" needs to be renamed to "config.php".
+This file is needed to create the database connection.
+Next create the tables: use the SQL-script which can be find in the directory "install".
+USE it-ausleihe to run the script on the right database then import the SQL-script.
+
+## Class dependencies
+The _autoload.php file loads all class dependencies.
+
+## Main classes
+The basic structure consists of five different classes to handle all functionalities.
+They are called: "Borrower", "Cart", "Device", "Loan" and "Database".
+
+## Connection to the database
+How to connect to the database can be inferred in the file "classes\database.php".
+This class has a constructor which creates the database connection by executing a query with prepared statements.
+
+The user data needed to connect has been provided in the "config.php.dist" file.
+Required are "databasename", "user", "password" and "host". After defining your database credentials, remove the ".dist".
+
+## Control of the database
+We control the access to the databse with an abstract class called "ActiveRecord".
+If we want to modify some data, the ActiveRecord class will manage all db operations (like save(), delete(), insert(),update()).
+This behavior is consistent with the singelton pattern.
+The file can be found under "classes\ActiveRecord.php".
+
+## Structure
+For a better understanding of the database structure, we created an updated ER-Model.
+Further documentation has been created using a class-diagram based on the UML notation.
+All relevant documentation can be found in the folder "docs".
+There you also can find the sql-script which creates the database.
+
+## Design
+The webpage design has originally been craeted using "Bootstrap".
+Later, the "Fontawesome" framework was implemented to improve visualization further.
+The code and icons can be find into the "public/assets" folder.
+
+## Templates
+There are templates in the "view" directory for "footer", "header" and the "navbar".
+Furthermore there is a folder "modal". There are the templates for adding, delete, admin or a history of a device or a cart.
 
 ## Authors
 Maximilian Lembke  
