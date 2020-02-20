@@ -35,7 +35,9 @@ A database has to be created: CREATE DATABASE 'IT-Ausleihe';
 In the directory "config", the file "config.php.dist" needs to be renamed to "config.php".  
 This file is needed to create the database connection.  
 Next create the tables: use the SQL-script which can be find in the directory "install".  
-USE it-ausleihe to run the script on the right database then import the SQL-script.  
+USE it-ausleihe to run the script on the right database then import the SQL-script. 
+Create a user for the database with the same name as that from the config.php file.  
+If you are a developer, then you have the option to import some test data. Look into the "docs\test data" directory.
 
 ## Class dependencies
 The _autoload.php file loads all class dependencies.  
