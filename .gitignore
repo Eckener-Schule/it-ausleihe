@@ -6,3 +6,4 @@ Dockerfile
 .data
 .dockerignore
 .vendor
+docs/phpdoc/reports/errors.html
