@@ -28,6 +28,12 @@ if(isset($_POST["deleteDevice"]) && !empty($_POST["deleteDevice"])) {
     echo '<script>setTimeout(function() { alert("Device with ID '. $deletedDevice->getDeviceID() .' was deleted!"); }, 1000);</script>';
 }
 
+$Cart = new Cart();
+
+if(isset($_POST['do']) && $_POST['do']==="addCart"){ 
+    $Cart->addCart($_POST['cart-device'], $_POST['cart-id'], $_POST['cart-name']);
+} 
+
 
 require_once "./view/template/header.php";
 require_once "./view/template/navbar.php";
@@ -43,13 +49,6 @@ require_once "./view/template/modal/modal_delete_cart.php";
 
 require_once "./view/template/modal/modal_add_cart.php";
 require_once "./view/template/modal/modal_add_device.php";
-
-
-$Cart = new Cart();
-
-if($_POST['do']==="addCart"){ 
-    $Cart->addCart($_POST['cart-device'], $_POST['cart-id'], $_POST['cart-name']);
-} 
 
 
 ?>
