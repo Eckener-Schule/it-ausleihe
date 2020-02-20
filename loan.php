@@ -5,11 +5,6 @@ require_once "./view/template/navbar.php";
 
 $Loan = new Loan(Database::getDbConnection());
 
-if(!$_POST['device-id'] && $_POST['cart-id'] || $_POST['device-id'] && !$_POST['cart-id']){
-     $Loan->addLoan($_POST);
-
-}
-
 ?>
 <main role="main" class="container">
     <div class="headline col-12">
