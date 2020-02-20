@@ -1,12 +1,16 @@
 <?php
+require_once "./_autoload.php";
 require_once "./view/template/header.php";
 require_once "./view/template/navbar.php";
+
+$Loan = new Loan(Database::getDbConnection());
+
 ?>
 <main role="main" class="container">
     <div class="headline col-12">
          <h4>Gerät/Wagen ausleihen:</h4>
     </div>
-    <form>
+    <form method="post">
         <div class="col-12 row form-content">
             <div class="col-sm-12 col-lg-6">
                 <div class="form-group">
